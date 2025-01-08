@@ -1,0 +1,41 @@
+:root {
+  /* Color Palette */
+  --1: #391e10;
+  --2: #734128;
+  --3: #c7a07a;
+  --4: #e2ceb1;
+  --5: #fdfce8;
+}
+
+body {
+  font-family: cursive, "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+.main-color {
+  background-color: var(--2) !important;
+}
+
+.no-select {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.banner {
+  height: 91.4vh;
+  background: linear-gradient(rgba(70, 39, 24, 0.4), rgba(92, 60, 45, 0.4), rgba(90, 51, 31, 0.4)), url("../image/banner.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.ease-transition {
+  transition: ease-in-out 0.2s;
+}
+
+.ease-transition:hover {
+  transform: scale(1.1);
+}
+
+.hovered-card:hover {
+  transform: scale(1.05);
+}

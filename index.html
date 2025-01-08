@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel</title>
+    <link rel="stylesheet" href="bootstrap-5.0.0-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark main-color">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <a class="navbar-brand me-auto ease-transition" href="#">Carousel Cafe</a>
+          <ul class="navbar-nav">
+            <li class="nav-item me-5">
+              <a class="nav-link active ease-transition" aria-current="page" href="#"><i class="bi bi-house"></i> Home</a>
+            </li>
+            <li class="nav-item me-5">
+              <a class="nav-link ease-transition" href="#"><i class="bi bi-three-dots"></i> Menu</a>
+            </li>
+            <li class="nav-item me-5">
+              <a class="nav-link ease-transition" href="#"><i class="bi bi-tag"></i> Promo</a>
+            </li>
+            <li class="nav-item me-5">
+              <a class="nav-link ease-transition" href="#" tabindex="-1" aria-disabled="true"><i class="bi bi-cart"></i> Keranjang</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Banner Start -->
+    <div class="container-fluid banner d-flex align-items-center">
+      <div class="container no-select">
+        <h1 class="text-light text-center display-5 mb-3 ease-transition">~Welcome to Carousel Cafe~</h1>
+        <h2 class="text-light text-center display-7 mb-4 ease-transition">* SINCE 1996 *</h2>
+        <div class="col-md-8 offset-md-2">
+          <div class="input-group input-group-lg">
+            <select class="form-control" id="inputGroupSelect04" aria-label="Example select with button addon">
+              <option selected hidden>Choose category...</option>
+              <option value="1">Cakes & Desserts</option>
+              <option value="2">Bread & Pastries</option>
+              <option value="3">Coffee & Tea</option>
+              <option value="4">Seasonal Specials</option>
+            </select>
+            <button class="btn btn-lg btn-warning text-light" type="button">Search</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Banner End -->
+
+    <!-- Promo Start -->
+    <div class="container-fluid py-5">
+      <div class="container">
+        <h2 class="text-center no-select ease-transition">Special Offer</h2>
+        <div class="row mt-5 justify-content-center">
+          <div class="col-sm-6 col-lg-3 hovered-card ease-transition mb-3">
+            <div class="card">
+              <img src="image/product/thumb/chocolate-mousse.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Buy One, Get One</h5>
+                <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, ut.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3 hovered-card ease-transition mb-3">
+            <div class="card">
+              <img src="image/product/thumb/brownies.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Free Brownies</h5>
+                <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, ut.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3 hovered-card ease-transition mb-3">
+            <div class="card">
+              <img src="image/product/thumb/coffee.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">20% OFF</h5>
+                <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, ut.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-5 d-flex justify-content-center ease-transition">
+          <button class="btn btn-warning btn-lg text-light">See More</button>
+        </div>
+      </div>
+    </div>
+    <!-- Promo End -->
+    <script src="bootstrap-5.0.0-dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
