@@ -5,14 +5,21 @@
   --3: #c7a07a;
   --4: #e2ceb1;
   --5: #fdfce8;
+  --black: #000;
+  --white: #fff;
 }
 
 body {
-  font-family: cursive, "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: 'Patrick Hand', cursive;
 }
+
 
 .main-color {
   background-color: var(--2) !important;
+}
+
+.service-color {
+  background: linear-gradient(to right, #683b24, #734128, #734128, #683b24);
 }
 
 .no-select {
@@ -28,6 +35,28 @@ body {
   background-position: center;
 }
 
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
 .ease-transition {
   transition: ease-in-out 0.2s;
 }
@@ -36,6 +65,17 @@ body {
   transform: scale(1.1);
 }
 
+.title-transition:hover {
+  transform: scale(1.03);
+}
+
 .hovered-card:hover {
   transform: scale(1.05);
+}
+
+.icon-service {
+  width: 90px;
+  height: 90px;
+  border: solid var(--white) 2px;
+  border-radius: 50%;
 }
