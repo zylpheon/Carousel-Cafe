@@ -209,7 +209,7 @@
     <!-- Review Start -->
     <div class="container-fluid py-5 linear-color">
       <div class="container">
-        <h2 class="text-light text-center mb-5 no-select">Reviews</h2>
+        <h2 class="text-light text-center mb-5 no-select ease-transition">Reviews</h2>
         <div class="row" data-masonry='{"percentPosition": true }'>
           <div class="col-lg-4 mb-3">
             <div class="card p-3">
@@ -281,6 +281,32 @@
       </div>
     </div>
     <!-- Review End -->
+
+    <!-- Reservation Start -->
+    <div class="container-fluid py-5">
+      <div class="container">
+        <h2 class="text-center no-select ease-transition">Reservation</h2>
+        <p class="text-center no-select title-transition ease-transition">Reservation now!!</p>
+        <form class="col-md-8 offset-md-2 col-lg-6 offset-lg-3 mt-5">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" />
+          </div>
+          <div class="mb-3">
+            <label for="contact" class="form-label">Contact Number</label>
+            <input type="text" class="form-control" id="contact" />
+          </div>
+          <div class="mb-3">
+            <label for="tables" class="form-label">Tables</label>
+            <input type="number" class="form-control" id="tables" />
+          </div>
+          <div>
+            <button class="btn btn-warning text-light w-100 title-transition ease-transition">Reserve</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- Reservation End -->
     <script src="bootstrap-5.0.0-dist/js/bootstrap.bundle.min.js"></script>
     <script src="dist/js/lightbox-plus-jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
