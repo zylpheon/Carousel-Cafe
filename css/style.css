@@ -10,15 +10,14 @@
 }
 
 body {
-  font-family: 'Patrick Hand', cursive;
+  font-family: "Patrick Hand", cursive;
 }
-
 
 .main-color {
   background-color: var(--2) !important;
 }
 
-.service-color {
+.linear-color {
   background: linear-gradient(to right, #683b24, #734128, #734128, #683b24);
 }
 
