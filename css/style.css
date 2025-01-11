@@ -1,10 +1,11 @@
 :root {
   /* Color Palette */
   --1: #391e10;
-  --2: #734128;
-  --3: #c7a07a;
-  --4: #e2ceb1;
-  --5: #fdfce8;
+  --2: #683b24;
+  --3: #734128;
+  --4: #c7a07a;
+  --5: #e2ceb1;
+  --6: #fdfce8;
   --black: #000;
   --white: #fff;
 }
@@ -14,11 +15,11 @@ body {
 }
 
 .main-color {
-  background-color: var(--2) !important;
+  background-color: var(--3) !important;
 }
 
 .linear-color {
-  background: linear-gradient(to right, #683b24, #734128, #734128, #683b24);
+  background: linear-gradient(to right, var(--2), var(--3), #734128, #683b24);
 }
 
 .no-select {
@@ -77,4 +78,12 @@ body {
   height: 90px;
   border: solid var(--white) 2px;
   border-radius: 50%;
+}
+
+.contact-color {
+  background: linear-gradient(var(--3), var(--3), var(--2));
+}
+
+.footer-color {
+  background: linear-gradient(var(--2), var(--3), var(--3));
 }
