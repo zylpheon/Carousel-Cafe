@@ -87,3 +87,10 @@ body {
 .footer-color {
   background: linear-gradient(var(--2), var(--3), var(--3));
 }
+
+.banner-product {
+  height: 70vh;
+  background: linear-gradient(rgba(70, 39, 24, 0.5), rgba(92, 60, 45, 0.5), rgba(90, 51, 31, 0.5)), url("../image/banner.jpg");
+  background-size: cover;
+  background-position: center;
+}
