@@ -1,0 +1,89 @@
+body {
+  font-family: cursive, "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+.main-bg {
+  background-color: rgb(114, 2, 114);
+}
+
+.main-color {
+  color: rgb(114, 2, 114) !important;
+}
+
+/* banner */
+
+.banner {
+  height: 80vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../image/banner.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* promo */
+
+.card-promo {
+  transition: 0.3s;
+  margin-bottom: 20px;
+}
+
+.card-promo:hover {
+  transform: scale(1.1);
+}
+
+/* pelayanan */
+
+.pelayanan {
+  background-color: #700970;
+}
+
+.pelayanan-content {
+  transition: 0.3s;
+}
+
+.pelayanan-content:hover {
+  transform: scale(1.1);
+}
+
+.pelayanan .icon-circle {
+  width: 90px;
+  height: 90px;
+  border: solid 2px;
+}
+
+/* menu favorit */
+
+.menu-favorit {
+  background-color: rgba(243, 243, 243);
+}
+
+.menu-favorit-content {
+  transition: 0.3s;
+}
+
+.menu-favorit-content:hover {
+  transform: scale(1.1);
+}
+
+/* testimony */
+
+.testimony-content {
+  transition: 0.3s;
+}
+
+.testimony-content:hover {
+  transform: scale(1.1);
+}
+
+/* subscribe */
+
+.subscribe-content {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* produk banner */
+.produk-banner {
+  height: 50vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../image/banner.jpg");
+  background-size: cover;
+  background-position: center;
+}
