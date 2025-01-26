@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel | Promo</title>
+    <link rel="icon" type="image/x-icon" href="image/logo.png" />
+    <link rel="stylesheet" href="bootstrap-5.0.0-dist/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="dist/css/lightbox.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav
+      class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark linear-color under-shadow"
+      data-aos="fade-down"
+    >
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <a class="navbar-brand me-auto nav-link" href="#"
+            ><img
+              src="image/logo.png"
+              alt=""
+              width="35"
+              height="35"
+              alt="Carousel"
+            />Carousel Cafe</a
+          >
+          <ul class="navbar-nav">
+            <li class="nav-item me-5">
+              <a class="nav-link" aria-current="page" href="index.html"
+                ><i class="bi bi-house me-2"></i>Home</a
+              >
+            </li>
+            <li class="nav-item me-5">
+              <a class="nav-link" href="product.html"
+                ><i class="bi bi-three-dots me-2"></i>Menu</a
+              >
+            </li>
+            <li class="nav-item me-5">
+              <a class="nav-link active" href="promo.html"
+                ><i class="bi bi-tag me-2"></i>Promo</a
+              >
+            </li>
+            <li class="nav-item me-5">
+              <a
+                class="nav-link"
+                href="order.html"
+                tabindex="-1"
+                aria-disabled="true"
+                ><i class="bi bi-cart me-2"></i>Order</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Banner Start -->
+    <div class="container-fluid banner d-flex align-items-center">
+      <div class="container no-select">
+        <h1 class="text-light text-center mb-3" data-aos="zoom-in">
+          ~Special Offers~
+        </h1>
+      </div>
+    </div>
+    <!-- Banner End -->
+
+    <!-- Main Start -->
+    <div class="container-fluid py-5">
+      <div class="container">
+        <!-- Category Start -->
+        <div class="row justify-content-center mb-5">
+          <div class="col-sm-4 col-md-3 col-lg-2 mb3">
+            <button
+              id="semuaPromoBtn"
+              onclick="showAll()"
+              class="btn btn-outline-warning w-100 fs-5 active"
+              data-aos="fade-up"
+            >
+              All Promo
+            </button>
+          </div>
+          <div class="col-sm-4 col-md-3 col-lg-2 mb3">
+            <button
+              id="diskonPromoBtn"
+              onclick="showDiskon()"
+              class="btn btn-outline-warning w-100 fs-5"
+              data-aos="fade-up"
+              data-aos-duration="650"
+            >
+              Promo Diskon
+            </button>
+          </div>
+          <div class="col-sm-4 col-md-3 col-lg-2 mb3">
+            <button
+              id="bonusPromoBtn"
+              onclick="showBonus()"
+              class="btn btn-outline-warning w-100 fs-5"
+              data-aos="fade-up"
+              data-aos-duration="850"
+            >
+              Promo Bonus
+            </button>
+          </div>
+        </div>
+        <!-- Category End -->
+
+        <!-- Promo Start -->
+        <div id="semuaPromo">
+          <div class="row justify-content-center">
+            <div class="col-sm-6 col-lg-3 mb-3" data-aos="fade-up">
+              <div class="card">
+                <a
+                  href="image/product/chocolate-roll.jpg"
+                  data-lightbox="chocolate-roll-product"
+                  data-title="Chocolate Roll"
+                >
+                  <img
+                    src="image/product/thumb/chocolate-roll.jpg"
+                    class="card-img-top"
+                    alt="choco-roll"
+                  />
+                </a>
+                <div class="card-body">
+                  <h5 class="card-title">Chocolate Roll Disc 20%</h5>
+                  <p class="card-text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Iste, ut.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-sm-6 col-lg-3 mb-3"
+              data-aos="fade-up"
+              data-aos-duration="600"
+            >
+              <div class="card">
+                <a
+                  href="image/product/cheese-cake.jpg"
+                  data-lightbox="cheese-cake-product"
+                  data-title="Cheese Cake"
+                >
+                  <img
+                    src="image/product/thumb/cheese-cake.jpg"
+                    class="card-img-top"
+                    alt="cheese-cake"
+                  />
+                </a>
+                <div class="card-body">
+                  <h5 class="card-title">Cheese Cake Disc 20%</h5>
+                  <p class="card-text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Iste, ut.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-sm-6 col-lg-3 mb-3"
+              data-aos="fade-up"
+              data-aos-duration="750"
+            >
+              <div class="card">
+                <a
+                  href="image/product/donut.jpg"
+                  data-lightbox="donut-product"
+                  data-title="Donut"
+                >
+                  <img
+                    src="image/product/thumb/donut.jpg"
+                    class="card-img-top"
+                    alt="donut"
+                  />
+                </a>
+                <div class="card-body">
+                  <h5 class="card-title">Donut Disc 20%</h5>
+                  <p class="card-text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Iste, ut.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-sm-6 col-lg-3 mb-3"
+              data-aos="fade-up"
+              data-aos-duration="800"
+            >
+              <div class="card">
+                <a
+                  href="image/product/thumb/chocolate-mousse.jpg"
+                  data-lightbox="chocolate-mousse-product"
+                  data-title="Chocolate Mousse"
+                >
+                  <img
+                    src="image/product/thumb/chocolate-mousse.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                </a>
+                <div class="card-body">
+                  <h5 class="card-title">Buy One, Get One</h5>
+                  <p class="card-text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Iste, ut.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-sm-6 col-lg-3 mb-3"
+              data-aos="fade-up"
+              data-aos-duration="600"
+            >
+              <div class="card">
+                <a
+                  href="image/product/thumb/brownies.jpg"
+                  data-lightbox="brownies-product"
+                  data-title="Brownies"
+                >
+                  <img
+                    src="image/product/thumb/brownies.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                </a>
+                <div class="card-body">
+                  <h5 class="card-title">Free Brownies</h5>
+                  <p class="card-text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Iste, ut.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-sm-6 col-lg-3 mb-3"
+              data-aos="fade-up"
+              data-aos-duration="750"
+            >
+              <div class="card">
+                <a
+                  href="image/product/thumb/coffee.jpg"
+                  data-lightbox="coffee-product"
+                  data-title="Cappucino"
+                >
+                  <img
+                    src="image/product/thumb/coffee.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                </a>
+                <div class="card-body">
+                  <h5 class="card-title">Free Cappucino</h5>
+                  <p class="card-text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Iste, ut.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="diskonPromo">
+          <div class="row justify-content-center">
+            <div class="col-sm-6 col-lg-3 mb-3">
+              <div class="card">
+                <a
+                  href="image/product/chocolate-roll.jpg"
+                  data-lightbox="chocolate-roll-product"
+                  data-title="Chocolate Roll"
+                >
+                  <img
+                    src="image/product/thumb/chocolate-roll.jpg"
+                    class="card-img-top"
+                    alt="choco-roll"
+                  />
+                </a>
+                <div class="card-body">
+                  <h5 class="card-title">Chocolate Roll Disc 20%</h5>
+                  <p class="card-text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Iste, ut.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3 mb-3">
+              <div class="card">
+                <a
+                  href="image/product/cheese-cake.jpg"
+                  data-lightbox="cheese-cake-product"
+                  data-title="Cheese Cake"
+                >
+                  <img
+                    src="image/product/thumb/cheese-cake.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                </a>
+                <div class="card-body">
+                  <h5 class="card-title">Cheese Cake Disc 20%</h5>
+                  <p class="card-text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Iste, ut.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3 mb-3">
+              <div class="card">
+                <a
+                  href="image/product/white-saucer-cake.jpg"
+                  data-lightbox="white-saucer-cake-product"
+                  data-title="White Saucer Cake"
+                >
+                  <img
+                    src="image/product/thumb/white-saucer-cake.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                </a>
+                <div class="card-body">
+                  <h5 class="card-title">White Saucer Cake Disc 20%</h5>
+                  <p class="card-text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Iste, ut.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="bonusPromo">
+          <div class="row justify-content-center">
+            <div class="col-sm-6 col-lg-3 mb-3">
+              <div class="card">
+                <a
+                  href="image/product/thumb/chocolate-mousse.jpg"
+                  data-lightbox="chocolate-mousse-product"
+                  data-title="Chocolate Mousse"
+                >
+                  <img
+                    src="image/product/thumb/chocolate-mousse.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                </a>
+                <div class="card-body">
+                  <h5 class="card-title">Buy One, Get One</h5>
+                  <p class="card-text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Iste, ut.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3 mb-3">
+              <div class="card">
+                <a
+                  href="image/product/thumb/brownies.jpg"
+                  data-lightbox="brownies-product"
+                  data-title="Brownies"
+                >
+                  <img
+                    src="image/product/thumb/brownies.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                </a>
+                <div class="card-body">
+                  <h5 class="card-title">Free Brownies</h5>
+                  <p class="card-text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Iste, ut.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3 mb-3">
+              <div class="card">
+                <a
+                  href="image/product/thumb/coffee.jpg"
+                  data-lightbox="coffee-product"
+                  data-title="Cappucino"
+                >
+                  <img
+                    src="image/product/thumb/coffee.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                </a>
+                <div class="card-body">
+                  <h5 class="card-title">Free Cappucino</h5>
+                  <p class="card-text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Iste, ut.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Promo End -->
+      </div>
+    </div>
+    <!-- Main End -->
+
+    <!-- Contact Start -->
+    <div class="container-fluid py-5 contact-color text-light">
+      <div class="container">
+        <h2 class="text-center no-select mb-5">Contact Us</h2>
+        <div class="row justify-content-center">
+          <div class="d-flex justify-content-center flex-wrap">
+            <div class="col-auto d-flex justify-content-center me-3">
+              <i class="bi bi-facebook fs-4"></i>
+            </div>
+            <div class="col-auto d-flex justify-content-center me-3">
+              <i class="bi bi-instagram fs-4"></i>
+            </div>
+            <div class="col-auto d-flex justify-content-center me-3">
+              <i class="bi bi-twitter fs-4"></i>
+            </div>
+            <div class="col-auto d-flex justify-content-center">
+              <i class="bi bi-youtube fs-4"></i>
+            </div>
+          </div>
+        </div>
+
+        <h5 class="text-center mt-5 mb-0 no-select">Subscribe</h5>
+        <p class="text-center font-monospace no-select">
+          For news about offers
+        </p>
+        <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter Email"
+              aria-label="Recipient's username"
+              aria-describedby="button-addon2"
+            />
+            <button
+              class="btn btn-warning text-light"
+              type="button"
+              id="button-addon2"
+            >
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Contact End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid py-3 text-light footer-color">
+      <div class="container d-flex justify-content-center">
+        <label class="no-select">&copy; 2025 Kelompok 2</label>
+      </div>
+    </div>
+    <!-- Footer End -->
+    <script src="bootstrap-5.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="dist/js/lightbox-plus-jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        var btnSemuaPromo = $("#semuaPromoBtn");
+        var btnDiskonPromo = $("#diskonPromoBtn");
+        var btnBonusPromo = $("#bonusPromoBtn");
+
+        var semuaPromoView = $("#semuaPromo");
+        var diskonPromoView = $("#diskonPromo");
+        var bonusPromoView = $("#bonusPromo");
+
+        diskonPromoView.hide();
+        bonusPromoView.hide();
+
+        function showAll() {
+          btnDiskonPromo.removeClass("active");
+          btnBonusPromo.removeClass("active");
+          btnSemuaPromo.addClass("active");
+
+          diskonPromoView.hide(1000);
+          bonusPromoView.hide(1000);
+          semuaPromoView.show(1000);
+        }
+
+        function showDiskon() {
+          btnSemuaPromo.removeClass("active");
+          btnBonusPromo.removeClass("active");
+          btnDiskonPromo.addClass("active");
+
+          semuaPromoView.hide(1000);
+          bonusPromoView.hide(1000);
+          diskonPromoView.show(1000);
+        }
+
+        function showBonus() {
+          btnSemuaPromo.removeClass("active");
+          btnDiskonPromo.removeClass("active");
+          btnBonusPromo.addClass("active");
+
+          semuaPromoView.hide(1000);
+          diskonPromoView.hide(1000);
+          bonusPromoView.show(1000);
+        }
+
+        btnSemuaPromo.click(showAll);
+        btnDiskonPromo.click(showDiskon);
+        btnBonusPromo.click(showBonus);
+      });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

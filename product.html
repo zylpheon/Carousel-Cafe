@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel | Product</title>
+    <link rel="icon" type="image/x-icon" href="image/logo.png" />
+    <link rel="stylesheet" href="bootstrap-5.0.0-dist/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="dist/css/lightbox.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav
+      class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark linear-color under-shadow"
+      data-aos="fade-down"
+    >
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <a class="navbar-brand me-auto nav-link" href="#"
+            ><img
+              src="image/logo.png"
+              alt=""
+              width="35"
+              height="35"
+              alt="Carousel"
+            />Carousel Cafe</a
+          >
+          <ul class="navbar-nav">
+            <li class="nav-item me-5">
+              <a class="nav-link" aria-current="page" href="index.html"
+                ><i class="bi bi-house me-2"></i>Home</a
+              >
+            </li>
+            <li class="nav-item me-5">
+              <a class="nav-link active" href="#"
+                ><i class="bi bi-three-dots me-2"></i>Menu</a
+              >
+            </li>
+            <li class="nav-item me-5">
+              <a class="nav-link" href="promo.html"
+                ><i class="bi bi-tag me-2"></i>Promo</a
+              >
+            </li>
+            <li class="nav-item me-5">
+              <a
+                class="nav-link"
+                href="order.html"
+                tabindex="-1"
+                aria-disabled="true"
+                ><i class="bi bi-cart me-2"></i>Order</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Banner Start -->
+    <div class="container-fluid banner d-flex align-items-center">
+      <div class="container no-select">
+        <h1 class="text-light text-center mb-3" data-aos="zoom-in">
+          ~Welcome to Carousel Cafe~
+        </h1>
+      </div>
+    </div>
+    <!-- Banner End -->
+
+    <!-- Product Start -->
+    <div class="container-fluid py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-lg-3 mb-5">
+            <h4 class="text-center mb-4 no-select" data-aos="fade-up">
+              Category
+            </h4>
+            <ul class="list-group" data-aos="fade-up">
+              <li class="list-group-item category-list" aria-current="true">
+                <strong>All</strong>
+              </li>
+              <li class="list-group-item">Cakes & Desserts</li>
+              <li class="list-group-item">Bread & Pastries</li>
+              <li class="list-group-item">Coffee & Tea</li>
+              <li class="list-group-item">Seasonal Specials</li>
+            </ul>
+          </div>
+          <!-- Products Start -->
+          <div class="col-md-3 col-lg-9">
+            <div class="row">
+              <h4 class="text-center mb-4 no-select" data-aos="fade-up">
+                All Products
+              </h4>
+              <div
+                class="col-sm-6 col-lg-4 mb-3"
+                data-aos="fade-up"
+                data-aos-duration="600"
+              >
+                <div class="card">
+                  <a
+                    href="image/product/chocolate-roll.jpg"
+                    data-lightbox="chocolate-roll"
+                    data-title="Chocolate Roll"
+                  >
+                    <img
+                      src="image/product/thumb/chocolate-roll.jpg"
+                      class="card-img-top"
+                      alt="chocolate-roll"
+                    />
+                  </a>
+                  <div class="card-body">
+                    <h5 class="card-title text-center text-warning">
+                      <strong>Chocolate Roll</strong>
+                    </h5>
+                    <p class="card-text text-center">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </p>
+                    <h4 class="text-center text-warning mb-3">Rp 99.000</h4>
+                    <div class="d-flex justify-content-center">
+                      <a
+                        href="detail.html?product=chocolate-roll"
+                        class="btn btn-outline-warning btn-lg"
+                        data-aos="zoom-in"
+                        >See More</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-sm-6 col-lg-4 mb-3"
+                data-aos="fade-up"
+                data-aos-duration="750"
+              >
+                <div class="card">
+                  <a
+                    href="image/product/brownies.jpg"
+                    data-lightbox="brownies"
+                    data-title="Brownies"
+                  >
+                    <img
+                      src="image/product/thumb/brownies.jpg"
+                      class="card-img-top"
+                      alt="brownies"
+                    />
+                  </a>
+                  <div class="card-body">
+                    <h5 class="card-title text-center text-warning">
+                      <strong>Brownies</strong>
+                    </h5>
+                    <p class="card-text text-center">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </p>
+                    <h4 class="text-center text-warning mb-3">Rp 99.000</h4>
+                    <div class="d-flex justify-content-center">
+                      <a
+                        href="detail.html?product=brownies"
+                        class="btn btn-outline-warning btn-lg"
+                        data-aos="zoom-in"
+                        >See More</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-sm-6 col-lg-4 mb-3"
+                data-aos="fade-up"
+                data-aos-duration="800"
+              >
+                <div class="card">
+                  <a
+                    href="image/product/milk-bread.jpg"
+                    data-lightbox="milk-bread"
+                    data-title="Milk Bread"
+                  >
+                    <img
+                      src="image/product/thumb/milk-bread.jpg"
+                      class="card-img-top"
+                      alt="milk-bread"
+                    />
+                  </a>
+                  <div class="card-body">
+                    <h5 class="card-title text-center text-warning">
+                      <strong>Milk Bread</strong>
+                    </h5>
+                    <p class="card-text text-center">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </p>
+                    <h4 class="text-center text-warning mb-3">Rp 99.000</h4>
+                    <div class="d-flex justify-content-center">
+                      <a
+                        href="detail.html?product=milk-bread"
+                        class="btn btn-outline-warning btn-lg"
+                        data-aos="zoom-in"
+                        >See More</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4 mb-3" data-aos="fade-up">
+                <div class="card">
+                  <a
+                    href="image/product/muffins.jpg"
+                    data-lightbox="chocolate-muffins"
+                    data-title="Chocolate Muffins"
+                  >
+                    <img
+                      src="image/product/thumb/muffin.jpg"
+                      class="card-img-top"
+                      alt="chocolate-muffins"
+                    />
+                  </a>
+                  <div class="card-body">
+                    <h5 class="card-title text-center text-warning">
+                      <strong>Muffins</strong>
+                    </h5>
+                    <p class="card-text text-center">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </p>
+                    <h4 class="text-center text-warning mb-3">Rp 99.000</h4>
+                    <div class="d-flex justify-content-center">
+                      <a
+                        href="detail.html?product=muffins"
+                        class="btn btn-outline-warning btn-lg"
+                        data-aos="zoom-in"
+                        >See More</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-sm-6 col-lg-4 mb-3"
+                data-aos="fade-up"
+                data-aos-duration="650"
+              >
+                <div class="card">
+                  <a
+                    href="image/product/honey-pancake.jpg"
+                    data-lightbox="honey-pancake"
+                    data-title="Honey Pancake"
+                  >
+                    <img
+                      src="image/product/thumb/honey-pancake.jpg"
+                      class="card-img-top"
+                      alt="honey-pancake"
+                    />
+                  </a>
+                  <div class="card-body">
+                    <h5 class="card-title text-center text-warning">
+                      <strong>Honey Pancake</strong>
+                    </h5>
+                    <p class="card-text text-center">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </p>
+                    <h4 class="text-center text-warning mb-3">Rp 99.000</h4>
+                    <div class="d-flex justify-content-center">
+                      <a
+                        href="detail.html?product=honey-pancake"
+                        class="btn btn-outline-warning btn-lg"
+                        data-aos="zoom-in"
+                        >See More</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-sm-6 col-lg-4 mb-3"
+                data-aos="fade-up"
+                data-aos-duration="850"
+              >
+                <div class="card">
+                  <a
+                    href="image/product/gingerbread.jpg"
+                    data-lightbox="ginger-bread"
+                    data-title="Ginger Bread"
+                  >
+                    <img
+                      src="image/product/thumb/ginger-gread.jpg"
+                      class="card-img-top"
+                      alt="ginger-bread"
+                    />
+                  </a>
+                  <div class="card-body">
+                    <h5 class="card-title text-center text-warning">
+                      <strong>Ginger Bread</strong>
+                    </h5>
+                    <p class="card-text text-center">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </p>
+                    <h4 class="text-center text-warning mb-3">Rp 99.000</h4>
+                    <div class="d-flex justify-content-center">
+                      <a
+                        href="detail.html?product=ginger-bread"
+                        class="btn btn-outline-warning btn-lg"
+                        data-aos="zoom-in"
+                        >See More</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Products End -->
+              <nav
+                class="mt-4 d-flex justify-content-center"
+                aria-label="Page navigation example"
+                data-aos="zoom-in"
+              >
+                <ul class="pagination">
+                  <li class="page-item">
+                    <a class="page-link" href="#">Previous</a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Product End -->
+
+    <!-- Contact Start -->
+    <div class="container-fluid py-5 contact-color text-light">
+      <div class="container">
+        <h2 class="text-center no-select mb-5" data-aos="zoom-in">
+          Contact Us
+        </h2>
+        <div class="row justify-content-center">
+          <div class="d-flex justify-content-center flex-wrap">
+            <div class="col-auto d-flex justify-content-center me-3">
+              <i class="bi bi-facebook fs-4" data-aos="fade-up"></i>
+            </div>
+            <div class="col-auto d-flex justify-content-center me-3">
+              <i
+                class="bi bi-instagram fs-4"
+                data-aos="fade-up"
+                data-aos-duration="600"
+              ></i>
+            </div>
+            <div class="col-auto d-flex justify-content-center me-3">
+              <i
+                class="bi bi-twitter fs-4"
+                data-aos="fade-up"
+                data-aos-duration="750"
+              ></i>
+            </div>
+            <div class="col-auto d-flex justify-content-center">
+              <i
+                class="bi bi-youtube fs-4"
+                data-aos="fade-up"
+                data-aos-duration="800"
+              ></i>
+            </div>
+          </div>
+        </div>
+
+        <h5 class="text-center mt-5 mb-0 no-select" data-aos="fade-up">
+          Subscribe
+        </h5>
+        <p class="text-center font-monospace no-select" data-aos="fade-up">
+          For updates and news
+        </p>
+        <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+          <div class="input-group mb-3" data-aos="fade-up">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter Email"
+              aria-label="Recipient's username"
+              aria-describedby="button-addon2"
+            />
+            <button
+              class="btn btn-warning text-light"
+              type="button"
+              id="button-addon2"
+            >
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Contact End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid py-3 text-light footer-color">
+      <div class="container d-flex justify-content-center">
+        <label class="no-select">&copy; 2025 Kelompok 2</label>
+      </div>
+    </div>
+    <!-- Footer End -->
+    <script src="bootstrap-5.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="dist/js/lightbox-plus-jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
