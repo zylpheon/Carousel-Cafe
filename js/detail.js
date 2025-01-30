@@ -180,7 +180,7 @@ document.addEventListener("DOMContentLoaded", function () {
       };
     }
 
-    // **Update breadcrumb**
+    // Update breadcrumb
     const breadcrumbCategory = document.querySelector(".breadcrumb-category");
     const breadcrumbItem = document.querySelector(".breadcrumb-item.active");
 
