@@ -115,3 +115,8 @@ body {
   position: relative;
   z-index: 99;
 }
+
+.py-7 {
+  padding-top: 5rem !important; /* 80px */
+  padding-bottom: 5rem !important;
+}

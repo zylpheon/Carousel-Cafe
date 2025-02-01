@@ -19,6 +19,10 @@
       rel="stylesheet"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
   </head>
   <body>
     <!-- Navbar Start -->
@@ -486,28 +490,110 @@
     <!-- Review End -->
 
     <!-- Reservation Start -->
-    <div class="container-fluid py-5">
+    <div class="container-fluid pt-5" id="contact">
       <div class="container">
-        <h2 class="text-center no-select" data-aos="zoom-in">Reservation</h2>
-        <form class="col-md-8 offset-md-2 col-lg-6 offset-lg-3 mt-3">
-          <div class="mb-3" data-aos="zoom-in">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" />
+        <div class="text-center mb-5">
+          <h2 class="text-center mb-5 no-select" data-aos="zoom-in">Contact</h2>
+        </div>
+        <div class="row px-3 pb-2">
+          <div class="col-sm-4 text-center mb-3">
+            <i
+              class="fas fa-2x fa-map-marker-alt mb-3 text-warning"
+              data-aos="fade-up"
+            ></i>
+            <h4 class="fw-bold" data-aos="fade-up">Address</h4>
+            <p data-aos="fade-up">SMK Negeri 2 Depok</p>
           </div>
-          <div class="mb-3" data-aos="zoom-in">
-            <label for="contact" class="form-label">Contact Number</label>
-            <input type="text" class="form-control" id="contact" />
+          <div class="col-sm-4 text-center mb-3">
+            <i
+              class="fas fa-2x fa-phone-alt mb-3 text-warning"
+              data-aos="fade-up"
+              data-aos-duration="650"
+            ></i>
+            <h4 class="fw-bold" data-aos="fade-up" data-aos-duration="650">
+              Phone
+            </h4>
+            <p data-aos="fade-up" data-aos-duration="650">+123 XXXX 6789</p>
           </div>
-          <div class="mb-3" data-aos="zoom-in">
-            <label for="tables" class="form-label">Tables</label>
-            <input type="number" class="form-control" id="tables" />
+          <div class="col-sm-4 text-center mb-3">
+            <i
+              class="fas fa-2x fa-envelope mb-3 text-warning"
+              data-aos="fade-up"
+              data-aos-duration="850"
+            ></i>
+            <h4 class="fw-bold" data-aos="fade-up" data-aos-duration="850">
+              Email
+            </h4>
+            <p data-aos="fade-up" data-aos-duration="850">lorem123@ipsum.com</p>
           </div>
-          <div>
-            <button class="btn btn-warning text-light w-100" data-aos="zoom-in">
-              Reserve
-            </button>
+        </div>
+        <div class="row">
+          <div class="col-md-6 pb-5">
+            <iframe
+              data-aos="fade-up"
+              data-aos-duration="650"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.07329140111642!2d110.39259060886089!3d-7.7715080593160435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a59233163d4cb%3A0x12a89680108b143d!2sSIJA-TKJ%20SMKN%202%20Depok!5e0!3m2!1sen!2sid!4v1725099182466!5m2!1sen!2sid"
+              width="100%"
+              height="443"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
           </div>
-        </form>
+          <div class="col-md-6 pb-5">
+            <div class="contact-form">
+              <form action="#" id="contactForm" novalidate>
+                <div class="mb-3" data-aos="fade-up" data-aos-duration="650">
+                  <input
+                    type="text"
+                    id="name"
+                    class="form-control bg-transparent p-3"
+                    placeholder="Your Name"
+                    required
+                  />
+                </div>
+                <div class="mb-3" data-aos="fade-up" data-aos-duration="650">
+                  <input
+                    type="email"
+                    id="email"
+                    class="form-control bg-transparent p-3"
+                    placeholder="Your Email"
+                    required
+                  />
+                </div>
+                <div class="mb-3" data-aos="fade-up" data-aos-duration="650">
+                  <input
+                    type="text"
+                    id="subject"
+                    class="form-control bg-transparent p-3"
+                    placeholder="Your Subject"
+                    required
+                  />
+                </div>
+                <div class="mb-3" data-aos="fade-up" data-aos-duration="650">
+                  <textarea
+                    id="message"
+                    rows="5"
+                    class="form-control bg-transparent p-3"
+                    placeholder="Message"
+                    required
+                  ></textarea>
+                </div>
+                <button
+                  data-aos="fade-up"
+                  data-aos-duration="650"
+                  class="btn btn-warning text-light py-3 px-5 rounded"
+                  type="submit"
+                  id="sendMessageButton"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- Reservation End -->
