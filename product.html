@@ -89,66 +89,98 @@
     </div>
     <!-- Banner End -->
 
-    <!-- Product Start -->
-    <div class="container-fluid py-5">
+    <!-- Menu Start -->
+    <div class="menu-box">
       <div class="container">
         <div class="row">
-          <div class="col-md-3 col-lg-3 mb-5">
-            <h4 class="text-center mb-4 no-select" data-aos="fade-up">
-              Category
-            </h4>
-            <ul class="list-group" data-aos="fade-up">
-              <li class="list-group-item category-list" aria-current="true">
-                <strong>All</strong>
-              </li>
-              <li class="list-group-item">Cakes</li>
-              <li class="list-group-item">Cookies</li>
-              <li class="list-group-item">Breads</li>
-              <li class="list-group-item">Pastries</li>
-              <li class="list-group-item">Seasonal Specials</li>
-            </ul>
-          </div>
-          <!-- Products Start -->
-          <div class="col-md-3 col-lg-9">
-            <div class="row">
-              <h4 class="text-center mb-4 no-select" data-aos="fade-up">
-                All Products
-              </h4>
-              <div id="product-list" class="row"></div>
-              <!-- Products End -->
-              <nav
-                class="mt-4 d-flex justify-content-center"
-                aria-label="Page navigation example"
-                data-aos="zoom-in"
-              >
-                <ul class="pagination">
-                  <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Previous">
-                      <span aria-hidden="true">&laquo;</span>
-                    </a>
-                  </li>
-                  <li class="page-item">
-                    <a class="page-link" href="#">1</a>
-                  </li>
-                  <li class="page-item">
-                    <a class="page-link" href="#">2</a>
-                  </li>
-                  <li class="page-item">
-                    <a class="page-link" href="#">3</a>
-                  </li>
-                  <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next">
-                      <span aria-hidden="true">&raquo;</span>
-                    </a>
-                  </li>
-                </ul>
-              </nav>
+          <div class="col-lg-12">
+            <div class="heading-title text-center">
+              <h2 class="text-center no-select py-5" data-aos="fade-up">
+                Special Offer
+              </h2>
             </div>
           </div>
         </div>
+        <div class="container text-center">
+          <div class="row justify-content-center filter-button-group">
+            <div
+              class="col-sm-4 col-md-3 col-lg-2 mb-3"
+              data-aos="fade-up"
+              data-aos-duration="600"
+            >
+              <button
+                class="btn btn-outline-warning w-100 fs-5 active"
+                data-filter="all"
+              >
+                All
+              </button>
+            </div>
+            <div
+              class="col-sm-4 col-md-3 col-lg-2 mb-3"
+              data-aos="fade-up"
+              data-aos-duration="700"
+            >
+              <button
+                class="btn btn-outline-warning w-100 fs-5"
+                data-filter="Cakes"
+              >
+                Cakes
+              </button>
+            </div>
+            <div
+              class="col-sm-4 col-md-3 col-lg-2 mb-3"
+              data-aos="fade-up"
+              data-aos-duration="800"
+            >
+              <button
+                class="btn btn-outline-warning w-100 fs-5"
+                data-filter="Cookies"
+              >
+                Cookies
+              </button>
+            </div>
+            <div
+              class="col-sm-4 col-md-3 col-lg-2 mb-3"
+              data-aos="fade-up"
+              data-aos-duration="900"
+            >
+              <button
+                class="btn btn-outline-warning w-100 fs-5"
+                data-filter="Breads"
+              >
+                Breads
+              </button>
+            </div>
+            <div
+              class="col-sm-4 col-md-3 col-lg-2 mb-3"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              <button
+                class="btn btn-outline-warning w-100 fs-5"
+                data-filter="Pastries"
+              >
+                Pastries
+              </button>
+            </div>
+            <div class="col-sm-4 col-md-3 col-lg-2 mb-3" data-aos="fade-up">
+              <button
+                class="btn btn-outline-warning w-100 fs-5"
+                data-filter="Seasonal Specials"
+                data-aos="fade-up"
+                data-aos-duration="1100"
+              >
+                Seasonal Specials
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="row special-list mb-5" id="product-list">
+          <!-- Produk akan dimasukkan secara dinamis melalui JavaScript -->
+        </div>
       </div>
     </div>
-    <!-- Product End -->
+    <!-- Menu End -->
 
     <!-- Contact Start -->
     <div class="container-fluid py-5 contact-color text-light">

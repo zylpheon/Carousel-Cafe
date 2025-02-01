@@ -6,6 +6,7 @@ const products = [
     image: "image/product/thumb/chocolate-roll.jpg",
     fullImage: "image/product/chocolate-roll.jpg",
     link: "detail.html?product=chocolate-roll",
+    category: "Cakes",
   },
   {
     name: "Brownies",
@@ -14,7 +15,7 @@ const products = [
     image: "image/product/thumb/brownies.jpg",
     fullImage: "image/product/brownies.jpg",
     link: "detail.html?product=brownies",
-    aosDuration: "750",
+    category: "Cakes",
   },
   {
     name: "Milk Bread",
@@ -23,7 +24,7 @@ const products = [
     image: "image/product/thumb/milk-bread.jpg",
     fullImage: "image/product/milk-bread.jpg",
     link: "detail.html?product=milk-bread",
-    aosDuration: "800",
+    category: "Breads",
   },
   {
     name: "Chocolate Muffins",
@@ -32,7 +33,7 @@ const products = [
     image: "image/product/thumb/muffin.jpg",
     fullImage: "image/product/muffins.jpg",
     link: "detail.html?product=muffins",
-    aosDuration: "", // Tidak ada data-aos-duration pada HTML awal
+    category: "Pastries",
   },
   {
     name: "Honey Pancake",
@@ -41,7 +42,7 @@ const products = [
     image: "image/product/thumb/honey-pancake.jpg",
     fullImage: "image/product/honey-pancake.jpg",
     link: "detail.html?product=honey-pancake",
-    aosDuration: "650",
+    category: "Pastries",
   },
   {
     name: "Ginger Bread",
@@ -50,7 +51,7 @@ const products = [
     image: "image/product/thumb/ginger-gread.jpg",
     fullImage: "image/product/gingerbread.jpg",
     link: "detail.html?product=ginger-bread",
-    aosDuration: "850",
+    category: "Seasonal Specials",
   },
 ];
 
