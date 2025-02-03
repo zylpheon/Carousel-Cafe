@@ -25,7 +25,7 @@ function displayProducts(filter) {
       <div class="col-sm-6 col-lg-3 mb-4 product-item" data-aos="fade-up" data-category="${
         product.category
       }">
-        <div class="card">
+        <div class="card under-shadow3">
           <a href="${product.fullImage}" data-lightbox="${product.name.replace(
       /\s+/g,
       "-"
