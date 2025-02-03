@@ -9,114 +9,112 @@ function getUrlParameter(name) {
 // Pemetaan detail produk
 const productDetails = {
   "blueberry-muffin": {
-    image: "blueberry-muffin.jpg",
+    image: "image/product/blueberry-muffin.jpg",
     title: "Blueberry Muffin",
     description:
-      "Muffin yang lezat dengan rasa blueberry yang kaya, dengan tekstur yang lembut dan renyah.",
+      "A delicious muffin with rich blueberry flavor, soft and crispy texture.",
     price: 99000,
     category: "Cakes",
   },
   "blueberry-roll": {
-    image: "blueberry-roll.jpg",
+    image: "image/product/blueberry-roll.jpg",
     title: "Blueberry Roll",
     description:
-      "Roll yang lezat dengan rasa blueberry yang kaya, dengan tekstur yang lembut dan renyah.",
-    price: 99000,
-    category: "Cakes",
-  },
-  "chocolate-muffin": {
-    image: "chocolate-muffin.jpg",
-    title: "Chocolate Muffin",
-    description:
-      "Muffin yang lezat dengan rasa coklat yang kaya, dengan tekstur yang lembut dan renyah.",
-    price: 99000,
-    category: "Cakes",
-  },
-  "chocolate-roll": {
-    image: "image/product/chocolate-roll.jpg",
-    title: "Chocolate Roll",
-    description:
-      "Roll cake cokelat dengan tekstur lembut dan rasa cokelat yang kaya. Dibuat dengan cokelat pilihan dan bahan-bahan berkualitas tinggi.",
+      "A soft roll cake filled with fresh and sweet blueberry filling.",
     price: 99000,
     category: "Cakes",
   },
   brownies: {
     image: "image/product/brownies.jpg",
     title: "Brownies",
-    description:
-      "Brownies klasik dengan tekstur lembut dan rasa cokelat yang kaya. Dibuat dengan cokelat pilihan dan bahan-bahan berkualitas tinggi.",
-    price: 99000,
-    category: "Pastries",
-  },
-  "milk-bread": {
-    image: "image/product/milk-bread.jpg",
-    title: "Milk Bread",
-    description:
-      "Roti lembut dengan rasa susu yang khas. Dibuat dengan bahan-bahan berkualitas tinggi dan teknik pembuatan roti yang teruji.",
-    price: 99000,
-    category: "Bread",
-  },
-  muffins: {
-    image: "image/product/muffin.jpg",
-    title: "Muffins",
-    description:
-      "Muffins lembut dengan rasa manis yang pas. Dibuat dengan bahan-bahan berkualitas tinggi dan teknik pembuatan muffins yang teruji.",
+    description: "Classic fudgy brownies with rich chocolate flavor.",
     price: 99000,
     category: "Cakes",
   },
-  "honey-pancake": {
-    image: "image/product/honey-pancake.jpg",
-    title: "Honey Pancake",
-    description:
-      "Pancake lembut dengan rasa madu yang khas. Dibuat dengan bahan-bahan berkualitas tinggi dan teknik pembuatan pancake yang teruji.",
+  "cheese-cake": {
+    image: "image/product/cheese-cake.jpg",
+    title: "Cheese Cake",
+    description: "Soft cheesecake with a creamy and rich flavor.",
     price: 99000,
     category: "Cakes",
   },
-  "ginger-bread": {
-    image: "image/product/gingerbread.jpg",
-    title: "Ginger Bread",
-    description:
-      "Roti jahe dengan rasa jahe yang khas. Dibuat dengan bahan-bahan berkualitas tinggi dan teknik pembuatan roti yang teruji.",
+  "cheese-chiffon": {
+    image: "image/product/cheese-chiffon.jpg",
+    title: "Cheese Chiffon",
+    description: "Soft chiffon cake with a tempting cheese aroma.",
     price: 99000,
-    category: "Cookies",
+    category: "Cakes",
+  },
+  "chocolate-mousse": {
+    image: "image/product/chocolate-mousse.jpg",
+    title: "Chocolate Mousse",
+    description:
+      "Light and soft chocolate mousse with an intense chocolate taste.",
+    price: 99000,
+    category: "Cakes",
+  },
+  "chocolate-muffin": {
+    image: "image/product/chocolate-muffin.jpg",
+    title: "Chocolate Muffin",
+    description:
+      "Delicious chocolate muffin with a soft texture and rich chocolate taste.",
+    price: 99000,
+    category: "Cakes",
+  },
+  "chocolate-roll": {
+    image: "image/product/chocolate-roll.jpg",
+    title: "Chocolate Roll",
+    description: "Soft chocolate roll cake with a rich chocolate filling.",
+    price: 99000,
+    category: "Cakes",
   },
   donut: {
     image: "image/product/donut.jpg",
     title: "Donut",
-    description:
-      "Donut lembut dengan rasa manis yang pas. Dibuat dengan bahan-bahan berkualitas tinggi dan teknik pembuatan donut yang teruji.",
+    description: "Soft donut with sweet and tempting toppings.",
     price: 99000,
     category: "Pastries",
   },
   fudge: {
     image: "image/product/fudge.jpg",
     title: "Fudge",
-    description:
-      "Fudge lembut dengan rasa cokelat yang khas. Dibuat dengan bahan-bahan berkualitas tinggi dan teknik pembuatan fudge yang teruji.",
+    description: "Soft chocolate fudge with a rich taste.",
     price: 99000,
     category: "Pastries",
   },
-  "strawberry-roll": {
-    image: "image/product/strawberry-roll.jpg",
-    title: "Strawberry Roll",
+  gingerbread: {
+    image: "image/product/gingerbread.jpg",
+    title: "Ginger Bread",
     description:
-      "Roti strawberry dengan rasa strawberry yang khas. Dibuat dengan bahan-bahan berkualitas tinggi dan teknik pembuatan roti yang teruji.",
+      "Gingerbread with a distinctive spicy aroma and delicious taste.",
     price: 99000,
-    category: "Cakes",
+    category: "Cookies",
+  },
+  "honey-pancake": {
+    image: "image/product/honey-pancake.jpg",
+    title: "Honey Pancake",
+    description: "Soft pancakes with a naturally sweet honey flavor.",
+    price: 99000,
+    category: "Pastries",
+  },
+  "milk-bread": {
+    image: "image/product/milk-bread.jpg",
+    title: "Milk Bread",
+    description: "Soft milk bread with the perfect sweet taste.",
+    price: 99000,
+    category: "Breads",
+  },
+  muffin: {
+    image: "image/product/muffin.jpg",
+    title: "Muffin",
+    description: "Delicious muffins with various delightful flavors.",
+    price: 99000,
+    category: "Pastries",
   },
   "orange-roll": {
     image: "image/product/orange-roll.jpg",
     title: "Orange Roll",
-    description:
-      "Roti jeruk dengan rasa jeruk yang khas. Dibuat dengan bahan-bahan berkualitas tinggi dan teknik pembuatan roti yang teruji.",
-    harga: 99000,
-    category: "Cakes",
-  },
-  "cheese-chiffon": {
-    image: "image/product/cheese-chiffon.jpg",
-    title: "Cheese Chiffon",
-    description:
-      "Cheese Chiffon dengan rasa keju yang khas. Dibuat denganbahan-bahan berkualitas tinggi dan teknik pembuatan roti yang teruji",
+    description: "Soft roll cake with a unique fresh orange flavor.",
     price: 99000,
     category: "Cakes",
   },
@@ -124,15 +122,21 @@ const productDetails = {
     image: "image/product/pandan-chiffon.jpg",
     title: "Pandan Chiffon",
     description:
-      "Pandan Chiffon dengan rasa keju yang khas. Dibuat denganbahan-bahan berkualitas tinggi dan teknik pembuatan roti yang teruji",
+      "Chiffon cake with a distinctive pandan aroma and soft texture.",
+    price: 99000,
+    category: "Cakes",
+  },
+  "strawberry-roll": {
+    image: "image/product/strawberry-roll.jpg",
+    title: "Strawberry Roll",
+    description: "Roll cake with a fresh and sweet strawberry flavor.",
     price: 99000,
     category: "Cakes",
   },
   "vanilla-chiffon": {
     image: "image/product/vanilla-chiffon.jpg",
     title: "Vanilla Chiffon",
-    description:
-      "Vanilla Chiffon dengan rasa keju yang khas. Dibuat denganbahan-bahan berkualitas tinggi dan teknik pembuatan roti yang teruji",
+    description: "Chiffon cake with a soft and fragrant vanilla taste.",
     price: 99000,
     category: "Cakes",
   },
