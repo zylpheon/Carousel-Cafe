@@ -4,15 +4,27 @@ const productList = document.getElementById("product-list");
 const filterButtons = document.querySelectorAll(".filter-button-group button");
 
 document.addEventListener("DOMContentLoaded", () => {
-  displayProducts("all");
+  const urlParams = new URLSearchParams(window.location.search);
+  const selectedCategory = urlParams.get("category") || "all";
+
+  setActiveFilterButton(selectedCategory);
+  displayProducts(selectedCategory);
 });
 
 filterButtons.forEach((button) => {
   button.addEventListener("click", function () {
-    filterButtons.forEach((btn) => btn.classList.remove("active"));
-    this.classList.add("active");
-    displayProducts(this.getAttribute("data-filter"));
+    const selectedCategory = this.getAttribute("data-filter");
+    updateURL(selectedCategory);
+    setActiveFilterButton(selectedCategory);
+    displayProducts(selectedCategory);
   });
+});
+
+window.addEventListener("popstate", () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const selectedCategory = urlParams.get("category") || "all";
+  setActiveFilterButton(selectedCategory);
+  displayProducts(selectedCategory);
 });
 
 function displayProducts(filter) {
@@ -51,4 +63,19 @@ function displayProducts(filter) {
     `;
     productList.innerHTML += productHTML;
   });
+}
+
+function setActiveFilterButton(category) {
+  filterButtons.forEach((btn) => btn.classList.remove("active"));
+  const activeButton = document.querySelector(
+    `.filter-button-group button[data-filter="${category}"]`
+  );
+  if (activeButton) {
+    activeButton.classList.add("active");
+  }
+}
+
+function updateURL(category) {
+  const newUrl = `${window.location.pathname}?category=${category}`;
+  window.history.pushState({ path: newUrl }, "", newUrl);
 }

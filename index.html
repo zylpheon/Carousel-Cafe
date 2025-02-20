@@ -100,14 +100,40 @@
               aria-label="Example select with button addon"
             >
               <option selected hidden>Choose category...</option>
-              <option value="1">Cakes & Desserts</option>
-              <option value="2">Bread & Pastries</option>
-              <option value="3">Coffee & Tea</option>
-              <option value="4">Seasonal Specials</option>
+              <option value="1">Cakes</option>
+              <option value="2">Cookies</option>
+              <option value="3">Breads</option>
+              <option value="4">Pastries</option>
+              <option value="5">Seasonal Specials</option>
             </select>
-            <button class="btn btn-lg btn-warning text-light" type="button">
+            <button
+              class="btn btn-lg btn-warning text-light"
+              type="button"
+              id="search-btn"
+            >
               Search
             </button>
+
+            <!-- Script Start -->
+            <script>
+              document
+                .getElementById("search-btn")
+                .addEventListener("click", function () {
+                  const selectedCategory =
+                    document.getElementById("inputGroupSelect04").value;
+
+                  if (selectedCategory) {
+                    const categoryText =
+                      document.getElementById("inputGroupSelect04").options[
+                        selectedCategory
+                      ].text;
+                    window.location.href = `./product.html?category=${encodeURIComponent(
+                      categoryText
+                    )}`;
+                  }
+                });
+            </script>
+            <!-- Script End -->
           </div>
         </div>
       </div>
@@ -624,31 +650,6 @@
                 data-aos-duration="800"
               ></i>
             </div>
-          </div>
-        </div>
-
-        <h5 class="text-center mt-5 mb-0 no-select" data-aos="fade-up">
-          Subscribe
-        </h5>
-        <p class="text-center font-monospace no-select" data-aos="fade-up">
-          For updates and news
-        </p>
-        <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-          <div class="input-group mb-3" data-aos="fade-up">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Enter Email"
-              aria-label="Recipient's username"
-              aria-describedby="button-addon2"
-            />
-            <button
-              class="btn btn-warning text-light"
-              type="button"
-              id="button-addon2"
-            >
-              Subscribe
-            </button>
           </div>
         </div>
       </div>
