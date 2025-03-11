@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel | Order</title>
+    <link rel="icon" type="image/x-icon" href="image/logo.png" />
+    <link rel="stylesheet" href="bootstrap-5.0.0-dist/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="dist/css/lightbox.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav
+      class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark linear-color under-shadow"
+      data-aos="fade-down"
+    >
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <a class="navbar-brand me-auto nav-link" href="#"
+            ><img
+              src="image/logo.png"
+              alt=""
+              width="35"
+              height="35"
+              alt="Carousel"
+            />Carousel Cafe</a
+          >
+          <ul class="navbar-nav">
+            <li class="nav-item me-5">
+              <a class="nav-link" aria-current="page" href="index.html"
+                ><i class="bi bi-house me-2"></i>Home</a
+              >
+            </li>
+            <li class="nav-item me-5">
+              <a class="nav-link" href="product.html"
+                ><i class="bi bi-three-dots me-2"></i>Menu</a
+              >
+            </li>
+            <li class="nav-item me-5">
+              <a class="nav-link" href="promo.html"
+                ><i class="bi bi-tag me-2"></i>Promo</a
+              >
+            </li>
+            <li class="nav-item me-5">
+              <a
+                class="nav-link active"
+                href="#"
+                tabindex="-1"
+                aria-disabled="true"
+                ><i class="bi bi-cart me-2"></i>Order</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Banner Start -->
+    <div class="container-fluid banner d-flex align-items-center">
+      <div class="container no-select">
+        <h1 class="text-light text-center mb-3" data-aos="zoom-in">
+          ~Ordering Method~
+        </h1>
+      </div>
+    </div>
+    <!-- Banner End -->
+
+    <!-- Main Start -->
+    <div class="container-fluid py-7">
+      <div class="container">
+        <h2 class="text-center mb-5 no-select" data-aos="zoom-in">Order</h2>
+        <!-- Baris Pertama: GoFood, GrabFood, ShopeeFood -->
+        <div class="row justify-content-center">
+          <div class="col-sm-4 col-md-3 col-lg-2 mb-3">
+            <button
+              class="btn btn-outline-warning w-100 fs-5 btn-lg"
+              data-aos="fade-up"
+            >
+              <img
+                alt="GoFood logo"
+                height="22"
+                src="image/gofood.png"
+                width="22"
+              />
+              GoFood
+            </button>
+          </div>
+          <div class="col-sm-4 col-md-3 col-lg-2 mb-3">
+            <button
+              class="btn btn-outline-warning w-100 fs-5 btn-lg"
+              data-aos="fade-up"
+              data-aos-duration="650"
+            >
+              <img
+                alt="GrabFood logo"
+                height="22"
+                src="image/grabfood.png"
+                width="22"
+              />
+              GrabFood
+            </button>
+          </div>
+          <div class="col-sm-4 col-md-3 col-lg-2">
+            <button
+              class="btn btn-outline-warning w-100 fs-5 btn-lg"
+              data-aos="fade-up"
+              data-aos-duration="850"
+            >
+              <img
+                alt="ShopeeFood logo"
+                height="22"
+                src="image/shopeefood.png"
+                width="22"
+              />
+              ShopeeFood
+            </button>
+          </div>
+        </div>
+
+        <!-- Baris Kedua: Gmail, WhatsApp -->
+        <div class="row justify-content-center mt-3">
+          <div class="col-sm-4 col-md-3 col-lg-2 mb-3">
+            <button
+              class="btn btn-outline-warning w-100 fs-5 btn-lg"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              <img
+                alt="Gmail logo"
+                height="22"
+                src="image/email.png"
+                width="22"
+              />
+              Gmail
+            </button>
+          </div>
+          <div class="col-sm-4 col-md-3 col-lg-2">
+            <button
+              class="btn btn-outline-warning w-100 fs-5 btn-lg"
+              data-aos="fade-up"
+              data-aos-duration="1200"
+            >
+              <img
+                alt="WhatsApp logo"
+                height="22"
+                src="image/whatsapp.png"
+                width="22"
+              />
+              WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Main End -->
+
+    <!-- Contact Start -->
+    <div class="container-fluid py-5 contact-color text-light">
+      <div class="container">
+        <h2 class="text-center no-select mb-5" data-aos="zoom-in">
+          Contact Us
+        </h2>
+        <div class="row justify-content-center">
+          <div class="d-flex justify-content-center flex-wrap">
+            <div class="col-auto d-flex justify-content-center me-3">
+              <i class="bi bi-facebook fs-4" data-aos="fade-up"></i>
+            </div>
+            <div class="col-auto d-flex justify-content-center me-3">
+              <i
+                class="bi bi-instagram fs-4"
+                data-aos="fade-up"
+                data-aos-duration="600"
+              ></i>
+            </div>
+            <div class="col-auto d-flex justify-content-center me-3">
+              <i
+                class="bi bi-twitter fs-4"
+                data-aos="fade-up"
+                data-aos-duration="750"
+              ></i>
+            </div>
+            <div class="col-auto d-flex justify-content-center">
+              <i
+                class="bi bi-youtube fs-4"
+                data-aos="fade-up"
+                data-aos-duration="800"
+              ></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Contact End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid py-3 text-light footer-color">
+      <div class="container d-flex justify-content-center">
+        <label class="no-select">&copy; 2025 Kelompok 2</label>
+      </div>
+    </div>
+    <!-- Footer End -->
+    <script src="bootstrap-5.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="dist/js/lightbox-plus-jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+      integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"
+      crossorigin="anonymous"
+      async
+    ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

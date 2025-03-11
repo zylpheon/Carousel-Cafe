@@ -1,0 +1,149 @@
+:root {
+  --1: #391e10;
+  --2: #683b24;
+  --3: #734128;
+  --4: #c7a07a;
+  --5: #e2ceb1;
+  --6: #fdfce8;
+  --black: #000;
+  --white: #fff;
+  --primary: #c7a07a;
+  --secondary: #e2ceb1;
+}
+
+/* Global Styles */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--4);
+  color: var(--black);
+  margin: 0;
+  padding: 20px;
+}
+
+/* Container */
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  background-color: var(--white);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  color: var(--2);
+  margin-bottom: 20px;
+}
+
+/* Button Style */
+button {
+  background-color: var(--primary);
+  color: var(--black);
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-bottom: 15px;
+}
+
+button:hover {
+  background-color: var(--secondary);
+}
+
+/* Table Style */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table,
+th,
+td {
+  border: 1px solid var(--primary);
+}
+
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+th {
+  background-color: var(--secondary);
+  color: var(--black);
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: var(--6);
+  padding: 25px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Close Button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  color: var(--2);
+  cursor: pointer;
+}
+
+/* Form Elements */
+form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+  color: var(--2);
+}
+
+form input[type="text"],
+form input[type="password"],
+form textarea,
+form select,
+form input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid var(--primary);
+  border-radius: 5px;
+  background-color: var(--white);
+  color: var(--black);
+}
+
+form button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--primary);
+  border: none;
+  color: var(--black);
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+  background-color: var(--secondary);
+}

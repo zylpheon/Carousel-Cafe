@@ -1,0 +1,122 @@
+:root {
+  /* Color Palette */
+  --1: #391e10;
+  --2: #683b24;
+  --3: #734128;
+  --4: #c7a07a;
+  --5: #e2ceb1;
+  --6: #fdfce8;
+  --black: #000;
+  --white: #fff;
+}
+
+body {
+  font-family: "Patrick Hand", cursive;
+}
+
+.main-color {
+  background-color: var(--3) !important;
+}
+
+.linear-color {
+  background: linear-gradient(to right, var(--2), var(--3), #734128, #683b24);
+}
+
+.no-select {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.banner {
+  height: 70vh;
+  background: linear-gradient(
+      rgba(70, 39, 24, 0.6),
+      rgba(92, 60, 45, 0.6),
+      rgba(90, 51, 31, 0.6)
+    ),
+    url("../image/banner.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #fdfce8;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.icon-service {
+  width: 90px;
+  height: 90px;
+  border: solid var(--white) 2px;
+  border-radius: 50%;
+}
+
+.contact-color {
+  background: linear-gradient(var(--3), var(--3), var(--2));
+}
+
+.footer-color {
+  background: linear-gradient(var(--2), var(--3), var(--3));
+}
+
+.banner-product {
+  height: 70vh;
+  background: linear-gradient(
+      rgba(70, 39, 24, 0.5),
+      rgba(92, 60, 45, 0.5),
+      rgba(90, 51, 31, 0.5)
+    ),
+    url("../image/banner.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.category-list {
+  background-color: #ffc107;
+  border-color: #ffc107;
+  color: #fdfce8;
+}
+
+.under-shadow {
+  -webkit-box-shadow: 0px 0px 100px 0px rgba(57, 30, 16, 0.8);
+  -moz-box-shadow: 0px 0px 100px 0px rgba(57, 30, 16, 0.8);
+  box-shadow: 0px 0px 100px 0px rgba(57, 30, 16, 0.8);
+}
+
+.under-shadow2 {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.under-shadow3 {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 0px -12px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.zindex-99 {
+  position: relative;
+  z-index: 99;
+}
+
+.py-7 {
+  padding-top: 5rem !important; /* 80px */
+  padding-bottom: 5rem !important;
+}
