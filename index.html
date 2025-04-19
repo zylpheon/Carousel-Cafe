@@ -119,14 +119,12 @@
               document
                 .getElementById("search-btn")
                 .addEventListener("click", function () {
-                  const selectedCategory =
-                    document.getElementById("inputGroupSelect04").value;
+                  const select = document.getElementById("inputGroupSelect04");
+                  const selectedIndex = select.selectedIndex;
 
-                  if (selectedCategory) {
-                    const categoryText =
-                      document.getElementById("inputGroupSelect04").options[
-                        selectedCategory
-                      ].text;
+                  if (selectedIndex > 0) {
+                    // Skip the "Choose category" option
+                    const categoryText = select.options[selectedIndex].text;
                     window.location.href = `./product.html?category=${encodeURIComponent(
                       categoryText
                     )}`;
@@ -663,6 +661,10 @@
       </div>
     </div>
     <!-- Footer End -->
+
+    <!-- JavaScript Files -->
+    <!-- Add this before the closing body tag -->
+    <script type="module" src="js/api-products.js"></script>
     <script src="bootstrap-5.0.0-dist/js/bootstrap.bundle.min.js"></script>
     <script src="dist/js/lightbox-plus-jquery.min.js"></script>
     <script

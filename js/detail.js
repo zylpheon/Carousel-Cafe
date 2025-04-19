@@ -1,4 +1,36 @@
-// Untuk mendapatkan parameter URL
+// API Configuration
+const API_URL = "https://puma-bold-grubworm.ngrok-free.app";
+
+// Helper function to add ngrok-skip-browser-warning header to all requests
+async function fetchWithHeaders(url, options = {}) {
+  // Ensure headers object exists
+  if (!options.headers) {
+    options.headers = {};
+  }
+
+  // Add ngrok skip header
+  options.headers["ngrok-skip-browser-warning"] = "1";
+  options.headers["Content-Type"] = options.headers["Content-Type"] || "application/json";
+  
+  // Add mode: 'cors' to explicitly request CORS
+  options.mode = 'cors';
+  
+  return fetch(url, options);
+}
+
+// Pre-warm ngrok connection
+async function preWarmNgrok() {
+  try {
+    console.log("Pre-warming ngrok connection in detail.js...");
+    // Direct fetch with the header
+    await fetchWithHeaders(`${API_URL}/`);
+    console.log("Prewarming ngrok complete in detail.js");
+  } catch (e) {
+    console.log("Prewarming attempt failed in detail.js:", e);
+  }
+}
+
+// Function to get URL parameter
 function getUrlParameter(name) {
   name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
   var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
@@ -6,183 +38,103 @@ function getUrlParameter(name) {
   return results === null ? "" : decodeURIComponent(results[1]);
 }
 
-// Pemetaan detail produk
-const productDetails = {
-  "blueberry-muffin": {
-    image: "image/product/blueberry-muffin.jpg",
-    title: "Blueberry Muffin",
-    description:
-      "A delicious muffin with rich blueberry flavor, soft and crispy texture.",
-    price: 99000,
-    category: "Cakes",
-  },
-  "blueberry-roll": {
-    image: "image/product/blueberry-roll.jpg",
-    title: "Blueberry Roll",
-    description:
-      "A soft roll cake filled with fresh and sweet blueberry filling.",
-    price: 99000,
-    category: "Cakes",
-  },
-  brownies: {
-    image: "image/product/brownies.jpg",
-    title: "Brownies",
-    description: "Classic fudgy brownies with rich chocolate flavor.",
-    price: 99000,
-    category: "Cakes",
-  },
-  "cheese-cake": {
-    image: "image/product/cheese-cake.jpg",
-    title: "Cheese Cake",
-    description:
-      "Our cheesecake is a rich, creamy delight with a smooth texture and a perfectly buttery crust that tantalizes your taste buds with each bite. The subtle tanginess of the cream cheese is balanced by a hint of sweetness, making it a versatile dessert for any occasion.This classic treat is meticulously crafted to deliver a luxurious mouthfeel that melts in your mouth. Whether enjoyed on its own or paired with a fresh fruit compote, our cheesecake promises a memorable experience that celebrates the art of dessert making.",
-    price: 99000,
-    category: "Cakes",
-  },
-  "cheese-chiffon": {
-    image: "image/product/cheese-chiffon.jpg",
-    title: "Cheese Chiffon",
-    description:
-      "Our Cheese Chiffon cake is a light and airy creation that infuses the subtle savory flavor of cheese into a sweet, delicate sponge. The soft, moist crumb pairs wonderfully with the mild tang of cheese, resulting in a unique taste that’s both refreshing and indulgent. Expertly baked to achieve the perfect balance, this chiffon cake offers a texture that is as smooth as it is fluffy. It’s an innovative twist on traditional cakes that promises a delightful and unexpected flavor experience for those looking to explore something new.",
-    price: 99000,
-    category: "Cakes",
-  },
-  "chocolate-mousse": {
-    image: "image/product/chocolate-mousse.jpg",
-    title: "Chocolate Mousse",
-    description:
-      "Light and soft chocolate mousse with an intense chocolate taste.",
-    price: 99000,
-    category: "Cakes",
-  },
-  "chocolate-muffin": {
-    image: "image/product/chocolate-muffin.jpg",
-    title: "Chocolate Muffin",
-    description:
-      "Delicious chocolate muffin with a soft texture and rich chocolate taste.",
-    price: 99000,
-    category: "Cakes",
-  },
-  "chocolate-roll": {
-    image: "image/product/chocolate-roll.jpg",
-    title: "Chocolate Roll",
-    description: "Soft chocolate roll cake with a rich chocolate filling.",
-    price: 99000,
-    category: "Cakes",
-  },
-  donut: {
-    image: "image/product/donut.jpg",
-    title: "Donut",
-    description: "Soft donut with sweet and tempting toppings.",
-    price: 99000,
-    category: "Pastries",
-  },
-  fudge: {
-    image: "image/product/fudge.jpg",
-    title: "Fudge",
-    description: "Soft chocolate fudge with a rich taste.",
-    price: 99000,
-    category: "Pastries",
-  },
-  gingerbread: {
-    image: "image/product/gingerbread.jpg",
-    title: "Ginger Bread",
-    description:
-      "Gingerbread with a distinctive spicy aroma and delicious taste.",
-    price: 99000,
-    category: "Cookies",
-  },
-  "honey-pancake": {
-    image: "image/product/honey-pancake.jpg",
-    title: "Honey Pancake",
-    description: "Soft pancakes with a naturally sweet honey flavor.",
-    price: 99000,
-    category: "Pastries",
-  },
-  "milk-bread": {
-    image: "image/product/milk-bread.jpg",
-    title: "Milk Bread",
-    description: "Soft milk bread with the perfect sweet taste.",
-    price: 99000,
-    category: "Breads",
-  },
-  muffin: {
-    image: "image/product/muffin.jpg",
-    title: "Muffin",
-    description: "Delicious muffins with various delightful flavors.",
-    price: 99000,
-    category: "Pastries",
-  },
-  "orange-roll": {
-    image: "image/product/orange-roll.jpg",
-    title: "Orange Roll",
-    description: "Soft roll cake with a unique fresh orange flavor.",
-    price: 99000,
-    category: "Cakes",
-  },
-  "pandan-chiffon": {
-    image: "image/product/pandan-chiffon.jpg",
-    title: "Pandan Chiffon",
-    description:
-      "Chiffon cake with a distinctive pandan aroma and soft texture.",
-    price: 99000,
-    category: "Cakes",
-  },
-  "strawberry-roll": {
-    image: "image/product/strawberry-roll.jpg",
-    title: "Strawberry Roll",
-    description: "Roll cake with a fresh and sweet strawberry flavor.",
-    price: 99000,
-    category: "Cakes",
-  },
-  "vanilla-chiffon": {
-    image: "image/product/vanilla-chiffon.jpg",
-    title: "Vanilla Chiffon",
-    description: "Chiffon cake with a soft and fragrant vanilla taste.",
-    price: 99000,
-    category: "Cakes",
-  },
-};
+// Function to fetch product data from API
+async function fetchProductData() {
+  try {
+    // Use fetchWithHeaders instead of regular fetch
+    const response = await fetchWithHeaders(`${API_URL}/tampil`);
+    
+    if (!response.ok) {
+      throw new Error(`API responded with status: ${response.status}`);
+    }
+    
+    // Get response as text first for debugging
+    const responseText = await response.text();
+    console.log("Response preview in detail.js:", responseText.substring(0, 100));
+    
+    try {
+      const data = JSON.parse(responseText);
+      
+      if (data.status === 200 && Array.isArray(data.values)) {
+        console.log(`Successfully fetched ${data.values.length} products in detail.js`);
+        return data.values;
+      } else {
+        console.error("Invalid API response format in detail.js:", data);
+        return [];
+      }
+    } catch (parseError) {
+      console.error("Failed to parse JSON response in detail.js:", parseError);
+      console.error("Response was:", responseText.substring(0, 500));
+      return [];
+    }
+  } catch (error) {
+    console.error("Error fetching products in detail.js:", error);
+    return [];
+  }
+}
 
-// Perbarui konten halaman ketika dokumen sudah siap
-document.addEventListener("DOMContentLoaded", function () {
-  // Dapatkan produk dari URL
-  const product = getUrlParameter("product");
+// Function to find product by slug
+async function getProductBySlug(slug) {
+  const products = await fetchProductData();
+  
+  // Find product where the slug matches the URL-friendly version of the title
+  return products.find(product => {
+    const productSlug = product.title.toLowerCase().replace(/\s+/g, '-');
+    return productSlug === slug;
+  });
+}
 
-  // Periksa apakah produk ada di pemetaan kita
-  if (productDetails[product]) {
-    const productData = productDetails[product];
-
+// Update page content with product details
+document.addEventListener("DOMContentLoaded", async function () {
+  // Get product slug from URL
+  const productSlug = getUrlParameter("product");
+  
+  if (!productSlug) {
+    console.error("No product specified in URL");
+    return;
+  }
+  
+  // Get product data from API
+  const product = await getProductBySlug(productSlug);
+  
+  if (product) {
     // Update image
-    const imgElement = document.querySelector(".img-fluid");
+    const imgElement = document.querySelector(".img-fluid.img-thumbnail");
     if (imgElement) {
-      imgElement.src = productData.image;
-      imgElement.alt = productData.title;
+      imgElement.src = product.image;
+      imgElement.alt = product.title;
     }
 
     // Update title
-    const titleElement = document.querySelector(".title-detail");
+    const titleElement = document.querySelector(".no-select.isi-detail");
     if (titleElement) {
-      titleElement.textContent = productData.title;
+      titleElement.textContent = product.title;
     }
 
-    // Update description
-    const descriptionElement = document.querySelectorAll(".isi-detail")[1];
+    // Update description (use description2 if available, otherwise use description1)
+    const descriptionElement = document.querySelector("p.isi-detail");
     if (descriptionElement) {
-      descriptionElement.textContent = productData.description;
+      descriptionElement.textContent = product.description2 || product.description1;
     }
 
     // Update price
-    const priceElement = document.querySelector(".isi-detail");
+    const priceElement = document.querySelector(".text-warning.isi-detail");
     if (priceElement) {
-      priceElement.textContent = `Rp ${productData.price.toLocaleString()}`;
+      // Format price to Rupiah
+      const formattedPrice = new Intl.NumberFormat('id-ID', {
+        style: 'currency',
+        currency: 'IDR',
+        minimumFractionDigits: 0
+      }).format(product.price);
+      
+      priceElement.textContent = formattedPrice;
     }
 
     // Update order button link
     const orderButton = document.querySelector(".btn-outline-warning");
     if (orderButton) {
       orderButton.onclick = function () {
-        window.location.href = `order.html?product=${product}`;
+        window.location.href = `order.html?product=${productSlug}`;
       };
     }
 
@@ -191,13 +143,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const breadcrumbItem = document.querySelector(".breadcrumb-item.active");
 
     if (breadcrumbCategory) {
-      breadcrumbCategory.textContent = productData.category;
+      breadcrumbCategory.textContent = product.category;
     }
 
     if (breadcrumbItem) {
-      breadcrumbItem.textContent = productData.title;
+      breadcrumbItem.textContent = product.title;
     }
   } else {
-    console.error("Produk tidak ditemukan!");
+    console.error("Product not found:", productSlug);
   }
 });

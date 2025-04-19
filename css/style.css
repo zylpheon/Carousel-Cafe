@@ -30,11 +30,9 @@ body {
 
 .banner {
   height: 70vh;
-  background: linear-gradient(
-      rgba(70, 39, 24, 0.6),
+  background: linear-gradient(rgba(70, 39, 24, 0.6),
       rgba(92, 60, 45, 0.6),
-      rgba(90, 51, 31, 0.6)
-    ),
+      rgba(90, 51, 31, 0.6)),
     url("../image/banner.jpg");
   background-size: cover;
   background-position: center;
@@ -79,11 +77,9 @@ body {
 
 .banner-product {
   height: 70vh;
-  background: linear-gradient(
-      rgba(70, 39, 24, 0.5),
+  background: linear-gradient(rgba(70, 39, 24, 0.5),
       rgba(92, 60, 45, 0.5),
-      rgba(90, 51, 31, 0.5)
-    ),
+      rgba(90, 51, 31, 0.5)),
     url("../image/banner.jpg");
   background-size: cover;
   background-position: center;
@@ -117,6 +113,23 @@ body {
 }
 
 .py-7 {
-  padding-top: 5rem !important; /* 80px */
+  padding-top: 5rem !important;
+  /* 80px */
   padding-bottom: 5rem !important;
+}
+
+
+/* Product image 1:1 aspect ratio and centering */
+.card-img-top {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: auto;
+}
+
+/* Optional: Add a container for the image to ensure consistent sizing */
+.card a {
+  display: block;
+  overflow: hidden;
 }

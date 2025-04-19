@@ -1,8 +1,7 @@
-// API Configuration
-const API_URL = "https://puma-bold-grubworm.ngrok-free.app";
-
-const productList = document.getElementById("product-list");
-const filterButtons = document.querySelectorAll(".filter-button-group button");
+// API Configuration - only define if not already defined
+if (typeof API_URL === 'undefined') {
+  const API_URL = "https://puma-bold-grubworm.ngrok-free.app";
+}
 
 // Helper function to add ngrok-skip-browser-warning header to all requests
 async function fetchWithHeaders(url, options = {}) {
@@ -24,50 +23,58 @@ async function fetchWithHeaders(url, options = {}) {
 // Pre-warm ngrok connection
 async function preWarmNgrok() {
   try {
-    console.log("Pre-warming ngrok connection...");
+    console.log("Pre-warming ngrok connection in product-api.js...");
     // Direct fetch with the header
     await fetchWithHeaders(`${API_URL}/`);
-    console.log("Prewarming ngrok complete");
+    console.log("Prewarming ngrok complete in product-api.js");
   } catch (e) {
-    console.log("Prewarming attempt failed:", e);
+    console.log("Prewarming attempt failed in product-api.js:", e);
   }
 }
 
 // Function to fetch products from the API
 async function fetchProducts() {
   try {
-    console.log("Fetching products from API...");
+    // Add a loading indicator to the console
+    console.log("Fetching products from API in product-api.js...");
     
+    // Use fetchWithHeaders instead of regular fetch
     const response = await fetchWithHeaders(`${API_URL}/tampil`);
     
+    // Log the response status
+    console.log(`API Response Status in product-api.js: ${response.status}`);
+    
+    // Check if the response is OK
     if (!response.ok) {
       throw new Error(`API responded with status: ${response.status}`);
     }
     
-    // Get response as text first for debugging
-    const responseText = await response.text();
-    console.log("Response preview:", responseText.substring(0, 100));
+    // Try to parse the response as JSON
+    const text = await response.text();
+    
+    // Debug: Log the first 100 characters of the response
+    console.log("Response preview in product-api.js:", text.substring(0, 100));
     
     try {
-      // Parse the text as JSON
-      const data = JSON.parse(responseText);
+      const data = JSON.parse(text);
       
       if (data.status === 200 && Array.isArray(data.values)) {
-        console.log(`Successfully fetched ${data.values.length} products`);
+        console.log(`Successfully fetched ${data.values.length} products in product-api.js`);
         return data.values;
       } else {
-        console.error("Invalid API response format:", data);
+        console.error("Invalid API response format in product-api.js:", data);
         return [];
       }
     } catch (parseError) {
-      console.error("Failed to parse JSON response:", parseError);
-      console.error("Response was:", responseText.substring(0, 500)); // Show first 500 chars
+      console.error("Failed to parse JSON response in product-api.js:", parseError);
+      console.error("Response was:", text.substring(0, 500)); // Show first 500 chars
       return [];
     }
   } catch (error) {
-    console.error("Error fetching products:", error);
+    console.error("Error fetching products in product-api.js:", error);
     
-    // Show error in product list
+    // Show a more user-friendly error in the product list
+    const productList = document.getElementById("product-list");
     if (productList) {
       productList.innerHTML = `
         <div class="col-12 text-center py-5">
@@ -92,34 +99,11 @@ async function getProductsByCategory(category) {
   return products.filter(product => product.category === category);
 }
 
-document.addEventListener("DOMContentLoaded", async () => {
-  // Pre-warm the ngrok connection
-  await preWarmNgrok();
+// Function to display products based on category filter
+async function displayProducts(filter = 'all') {
+  const productList = document.getElementById("product-list");
+  if (!productList) return;
   
-  const urlParams = new URLSearchParams(window.location.search);
-  const selectedCategory = urlParams.get("category") || "all";
-
-  setActiveFilterButton(selectedCategory);
-  await displayProducts(selectedCategory);
-});
-
-filterButtons.forEach((button) => {
-  button.addEventListener("click", function () {
-    const selectedCategory = this.getAttribute("data-filter");
-    updateURL(selectedCategory);
-    setActiveFilterButton(selectedCategory);
-    displayProducts(selectedCategory);
-  });
-});
-
-window.addEventListener("popstate", () => {
-  const urlParams = new URLSearchParams(window.location.search);
-  const selectedCategory = urlParams.get("category") || "all";
-  setActiveFilterButton(selectedCategory);
-  displayProducts(selectedCategory);
-});
-
-async function displayProducts(filter) {
   // Show loading spinner
   productList.innerHTML = `
     <div class="col-12 text-center py-5">
@@ -135,7 +119,7 @@ async function displayProducts(filter) {
     if (products.length > 0) {
       productList.innerHTML = '';
       
-      products.forEach((product) => {
+      products.forEach(product => {
         // Create URL-friendly slug from title
         const slug = product.title.toLowerCase().replace(/\s+/g, '-');
         
@@ -183,8 +167,51 @@ async function displayProducts(filter) {
   }
 }
 
+// Set up category filter buttons
+function setupFilterButtons() {
+  const filterButtons = document.querySelectorAll(".filter-button-group button");
+  if (!filterButtons.length) return;
+  
+  filterButtons.forEach(button => {
+    button.addEventListener("click", function() {
+      const selectedCategory = this.getAttribute("data-filter");
+      
+      // Update active button
+      filterButtons.forEach(btn => btn.classList.remove("active"));
+      this.classList.add("active");
+      
+      // Update URL
+      updateURL(selectedCategory);
+      
+      // Display filtered products
+      displayProducts(selectedCategory);
+    });
+  });
+}
+
+// Update URL with selected category
+function updateURL(category) {
+  const newUrl = `${window.location.pathname}?category=${category}`;
+  window.history.pushState({ path: newUrl }, "", newUrl);
+}
+
+// Handle browser back/forward navigation
+window.addEventListener("popstate", () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const selectedCategory = urlParams.get("category") || "all";
+  
+  // Update active button
+  setActiveFilterButton(selectedCategory);
+  
+  // Display products based on URL parameter
+  displayProducts(selectedCategory);
+});
+
+// Set active filter button based on category
 function setActiveFilterButton(category) {
-  filterButtons.forEach((btn) => btn.classList.remove("active"));
+  const filterButtons = document.querySelectorAll(".filter-button-group button");
+  filterButtons.forEach(btn => btn.classList.remove("active"));
+  
   const activeButton = document.querySelector(
     `.filter-button-group button[data-filter="${category}"]`
   );
@@ -193,7 +220,18 @@ function setActiveFilterButton(category) {
   }
 }
 
-function updateURL(category) {
-  const newUrl = `${window.location.pathname}?category=${category}`;
-  window.history.pushState({ path: newUrl }, "", newUrl);
-}
+// Initialize when DOM is loaded
+document.addEventListener("DOMContentLoaded", () => {
+  // Get category from URL if present
+  const urlParams = new URLSearchParams(window.location.search);
+  const selectedCategory = urlParams.get("category") || "all";
+  
+  // Set active button
+  setActiveFilterButton(selectedCategory);
+  
+  // Display products
+  displayProducts(selectedCategory);
+  
+  // Set up filter buttons
+  setupFilterButtons();
+});
