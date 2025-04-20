@@ -73,83 +73,125 @@ async function fetchProductData() {
   }
 }
 
-// Function to find product by slug
-async function getProductBySlug(slug) {
-  const products = await fetchProductData();
-  
-  // Find product where the slug matches the URL-friendly version of the title
-  return products.find(product => {
-    const productSlug = product.title.toLowerCase().replace(/\s+/g, '-');
-    return productSlug === slug;
-  });
-}
-
-// Update page content with product details
-document.addEventListener("DOMContentLoaded", async function () {
+// Function to render product detail
+async function renderProductDetail() {
   // Get product slug from URL
-  const productSlug = getUrlParameter("product");
+  const productSlug = getUrlParameter('product');
   
   if (!productSlug) {
-    console.error("No product specified in URL");
+    console.log("No product slug found in URL");
     return;
   }
   
-  // Get product data from API
-  const product = await getProductBySlug(productSlug);
-  
-  if (product) {
-    // Update image
-    const imgElement = document.querySelector(".img-fluid.img-thumbnail");
-    if (imgElement) {
-      imgElement.src = product.image;
-      imgElement.alt = product.title;
-    }
-
-    // Update title
-    const titleElement = document.querySelector(".no-select.isi-detail");
-    if (titleElement) {
-      titleElement.textContent = product.title;
-    }
-
-    // Update description (use description2 if available, otherwise use description1)
-    const descriptionElement = document.querySelector("p.isi-detail");
-    if (descriptionElement) {
-      descriptionElement.textContent = product.description2 || product.description1;
-    }
-
-    // Update price
-    const priceElement = document.querySelector(".text-warning.isi-detail");
-    if (priceElement) {
-      // Format price to Rupiah
-      const formattedPrice = new Intl.NumberFormat('id-ID', {
-        style: 'currency',
-        currency: 'IDR',
-        minimumFractionDigits: 0
-      }).format(product.price);
+  try {
+    const products = await fetchProductData();
+    
+    // Find the product that matches the slug
+    const product = products.find(item => {
+      const slug = item.title.toLowerCase().replace(/\s+/g, '-');
+      return slug === productSlug;
+    });
+    
+    if (product) {
+      // Update breadcrumb
+      const categoryElement = document.querySelector('.breadcrumb-category');
+      if (categoryElement) categoryElement.textContent = product.category;
       
-      priceElement.textContent = formattedPrice;
+      const activeElement = document.querySelector('.breadcrumb-item.active');
+      if (activeElement) activeElement.textContent = product.title;
+      
+      // Update product image
+      const imageElement = document.querySelector('.img-fluid.img-thumbnail');
+      if (imageElement) {
+        imageElement.src = product.image;
+        imageElement.alt = product.title;
+      }
+      
+      // Update product details
+      const titleElement = document.querySelector('.no-select.isi-detail');
+      if (titleElement) titleElement.textContent = product.title;
+      
+      const descriptionElement = document.querySelector('p.isi-detail');
+      if (descriptionElement) {
+        // Use description2 if available, otherwise use description1
+        descriptionElement.textContent = product.description2 || product.description1;
+      }
+      
+      const priceElement = document.querySelector('.text-warning.isi-detail');
+      if (priceElement) {
+        // Format price to Rupiah
+        const formattedPrice = new Intl.NumberFormat('id-ID', {
+          style: 'currency',
+          currency: 'IDR',
+          minimumFractionDigits: 0
+        }).format(product.price);
+        
+        priceElement.textContent = formattedPrice;
+      }
+      
+      // Render random recommendations
+      renderRandomRecommendations(products, productSlug);
+    } else {
+      console.error("Product not found:", productSlug);
     }
-
-    // Update order button link
-    const orderButton = document.querySelector(".btn-outline-warning");
-    if (orderButton) {
-      orderButton.onclick = function () {
-        window.location.href = `order.html?product=${productSlug}`;
-      };
-    }
-
-    // Update breadcrumb
-    const breadcrumbCategory = document.querySelector(".breadcrumb-category");
-    const breadcrumbItem = document.querySelector(".breadcrumb-item.active");
-
-    if (breadcrumbCategory) {
-      breadcrumbCategory.textContent = product.category;
-    }
-
-    if (breadcrumbItem) {
-      breadcrumbItem.textContent = product.title;
-    }
-  } else {
-    console.error("Product not found:", productSlug);
+  } catch (error) {
+    console.error("Failed to render product detail:", error);
   }
+}
+
+// Function to render random recommendations
+function renderRandomRecommendations(products, currentProductSlug) {
+  if (!products || products.length === 0) return;
+  
+  // Filter out the current product
+  const filteredProducts = products.filter(product => {
+    const slug = product.title.toLowerCase().replace(/\s+/g, '-');
+    return slug !== currentProductSlug;
+  });
+  
+  // Shuffle the filtered products
+  const shuffledProducts = [...filteredProducts].sort(() => 0.5 - Math.random());
+  
+  // Take the first 4 products (or less if there aren't enough)
+  const recommendedProducts = shuffledProducts.slice(0, 4);
+  
+  // Get the recommendation container
+  const recommendationContainer = document.querySelector('.recommendation-section .row');
+  if (!recommendationContainer) return;
+  
+  // Clear existing recommendations
+  recommendationContainer.innerHTML = '';
+  
+  // Add the random recommendations
+  recommendedProducts.forEach((product, index) => {
+    const productSlug = product.title.toLowerCase().replace(/\s+/g, '-');
+    const recommendationItem = document.createElement('div');
+    recommendationItem.className = 'col-sm-6 col-lg-3 mb-3';
+    recommendationItem.setAttribute('data-aos', 'fade-up');
+    
+    if (index > 0) {
+      recommendationItem.setAttribute('data-aos-duration', (600 + (index * 100)).toString());
+    }
+    
+    recommendationItem.innerHTML = `
+      <a href="detail.html?product=${productSlug}">
+        <img
+          src="${product.image}"
+          class="img-fluid img-thumbnail"
+          alt="${product.title}"
+        />
+      </a>
+      <div class="text-center mt-2">
+        <h5>${product.title}</h5>
+      </div>
+    `;
+    
+    recommendationContainer.appendChild(recommendationItem);
+  });
+}
+
+// Initialize the page
+document.addEventListener('DOMContentLoaded', () => {
+  preWarmNgrok();
+  renderProductDetail();
 });

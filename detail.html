@@ -116,11 +116,8 @@
       <div class="container">
         <div class="row">
           <div class="col-md-5 col-lg-4 mb-3" data-aos="fade-up">
-            <img
-              src="image/product/baked-pastry.jpg"
-              class="img-fluid img-thumbnail .img-detail"
-              alt="Chocolate Cake"
-            />
+            <!-- Change this line in the main product image section -->
+            <img class="img-fluid img-thumbnail img-detail" />
           </div>
           <div class="col-md-6 offset-md-1 col-lg-7 offset-lg-1">
             <h1 class="no-select isi-detail" data-aos="fade-up">Title</h1>
@@ -149,60 +146,16 @@
     <!-- Main End -->
 
     <!-- Recommendation Start -->
-    <div class="container-fluid py-5" style="background-color: #fef9ec">
+    <div
+      class="container-fluid py-5 recommendation-section"
+      style="background-color: #fef9ec"
+    >
       <div class="container">
         <h2 class="text-center mb-5 no-select" data-aos="fade-up">
           Your Recommendation
         </h2>
         <div class="row justify-content-center">
-          <div class="col-sm-6 col-lg-2 mb-3" data-aos="fade-up">
-            <a href="detail.html?product=brownies">
-              <img
-                src="image/product/thumb/brownies.jpg"
-                class="img-fluid img-thumbnail"
-                alt="Brownies"
-              />
-            </a>
-          </div>
-          <div
-            class="col-sm-6 col-lg-2 mb-3"
-            data-aos="fade-up"
-            data-aos-duration="750"
-          >
-            <a href="detail.html?product=honey-pancake">
-              <img
-                src="image/product/thumb/honey-pancake.jpg"
-                class="img-fluid img-thumbnail"
-                alt="Honey Pancake"
-              />
-            </a>
-          </div>
-          <div
-            class="col-sm-6 col-lg-2 mb-3"
-            data-aos="fade-up"
-            data-aos-duration="800"
-          >
-            <a href="detail.html?product=donut">
-              <img
-                src="image/product/thumb/donut.jpg"
-                class="img-fluid img-thumbnail"
-                alt="Donut"
-              />
-            </a>
-          </div>
-          <div
-            class="col-sm-6 col-lg-2 mb-3"
-            data-aos="fade-up"
-            data-aos-duration="600"
-          >
-            <a href="detail.html?product=fudge">
-              <img
-                src="image/product/thumb/fudge.jpg"
-                class="img-fluid img-thumbnail"
-                alt="Cheese Cake"
-              />
-            </a>
-          </div>
+          <!-- Dynamic recommendations will be inserted here -->
         </div>
       </div>
     </div>
@@ -278,15 +231,16 @@
       </div>
     </div>
     <!-- Footer End -->
+    <!-- Replace these script tags at the bottom of your file -->
     <script src="bootstrap-5.0.0-dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
-    <!-- Replace the old script tag for product.js with this -->
+    <!-- Load api-products.js as a module -->
     <script type="module" src="js/api-products.js"></script>
+    <!-- Load detail.js as a regular script after api-products.js -->
     <script src="js/detail.js"></script>
   </body>
 </html>
-<!-- Add this before the closing body tag -->
-<script src="js/api-products.js"></script>
+<!-- Remove this duplicate script tag -->
