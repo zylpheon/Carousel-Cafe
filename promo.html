@@ -92,349 +92,12 @@
     <!-- Main Start -->
     <div class="container-fluid py-5">
       <div class="container">
-        <!-- Category Start -->
-        <div class="row justify-content-center mb-5">
-          <div class="col-sm-4 col-md-3 col-lg-2 mb-3">
-            <button
-              id="semuaPromoBtn"
-              onclick="showAll()"
-              class="btn btn-outline-warning w-100 fs-5 active"
-              data-aos="fade-up"
-            >
-              All Promo
-            </button>
-          </div>
-          <div class="col-sm-4 col-md-3 col-lg-2 mb-3">
-            <button
-              id="diskonPromoBtn"
-              onclick="showDiskon()"
-              class="btn btn-outline-warning w-100 fs-5"
-              data-aos="fade-up"
-              data-aos-duration="650"
-            >
-              Promo Diskon
-            </button>
-          </div>
-          <div class="col-sm-4 col-md-3 col-lg-2">
-            <button
-              id="bonusPromoBtn"
-              onclick="showBonus()"
-              class="btn btn-outline-warning w-100 fs-5"
-              data-aos="fade-up"
-              data-aos-duration="850"
-            >
-              Promo Bonus
-            </button>
-          </div>
-        </div>
-        <!-- Category End -->
+        <!-- Remove the filter buttons section -->
 
-        <!-- Promo Start -->
-        <div id="semuaPromo">
-          <div class="row justify-content-center">
-            <div class="col-sm-6 col-lg-3 mb-3" data-aos="fade-up">
-              <div class="card under-shadow3">
-                <a
-                  href="image/product/blueberry-muffin.jpg"
-                  data-lightbox="bluebrery-muffin-product"
-                  data-title="Blueberry Muffin"
-                >
-                  <img
-                    src="image/product/thumb/blueberry-muffin.jpg"
-                    class="card-img-top"
-                    alt="blueberry-muffin"
-                  />
-                </a>
-                <div class="card-body">
-                  <h5 class="card-title">Blueberry Muffin Disc 10%</h5>
-                  <p class="card-text">
-                    "Enjoy the perfect balance of fluffy texture and real
-                    blueberry goodness with a special 10% discount! Limited-time
-                    offer—grab yours today!
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div
-              class="col-sm-6 col-lg-3 mb-3"
-              data-aos="fade-up"
-              data-aos-duration="600"
-            >
-              <div class="card under-shadow3">
-                <a
-                  href="image/product/cheese-chiffon.jpg"
-                  data-lightbox="cheese-chiffon-product"
-                  data-title="Cheese Chiffon"
-                >
-                  <img
-                    src="image/product/thumb/cheese-chiffon.jpg"
-                    class="card-img-top"
-                    alt="Cheese Chiffon"
-                  />
-                </a>
-                <div class="card-body">
-                  <h5 class="card-title">Cheese Chiffon Disc 15%</h5>
-                  <p class="card-text">
-                    "Indulge in the rich, soft, and cheesy delight of our Cheese
-                    Chiffon Cake. Get 15% off and savor every bite!"
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div
-              class="col-sm-6 col-lg-3 mb-3"
-              data-aos="fade-up"
-              data-aos-duration="750"
-            >
-              <div class="card under-shadow3">
-                <a
-                  href="image/product/donut.jpg"
-                  data-lightbox="donut-product"
-                  data-title="Donut"
-                >
-                  <img
-                    src="image/product/thumb/donut.jpg"
-                    class="card-img-top"
-                    alt="donut"
-                  />
-                </a>
-                <div class="card-body">
-                  <h5 class="card-title">Donut Disc 20%</h5>
-                  <p class="card-text">
-                    "Crispy on the outside, soft on the inside—our donuts are a
-                    must-try! Enjoy a 20% discount and treat yourself to a sweet
-                    delight."
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div
-              class="col-sm-6 col-lg-3 mb-3"
-              data-aos="fade-up"
-              data-aos-duration="800"
-            >
-              <div class="card under-shadow3">
-                <a
-                  href="image/product/thumb/chocolate-mousse.jpg"
-                  data-lightbox="chocolate-mousse-product"
-                  data-title="Chocolate Mousse"
-                >
-                  <img
-                    src="image/product/thumb/chocolate-mousse.jpg"
-                    class="card-img-top"
-                    alt="..."
-                  />
-                </a>
-                <div class="card-body">
-                  <h5 class="card-title">Buy One, Get One</h5>
-                  <p class="card-text">
-                    "Double the joy with our Buy One, Get One Free offer!
-                    Available every Sunday—don’t miss out on this sweet deal."
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div
-              class="col-sm-6 col-lg-3 mb-3"
-              data-aos="fade-up"
-              data-aos-duration="600"
-            >
-              <div class="card under-shadow3">
-                <a
-                  href="image/product/thumb/fudge.jpg"
-                  data-lightbox="fudges-product"
-                  data-title="Fudges"
-                >
-                  <img
-                    src="image/product/thumb/fudge.jpg"
-                    class="card-img-top"
-                    alt="..."
-                  />
-                </a>
-                <div class="card-body">
-                  <h5 class="card-title">Free Fudges</h5>
-                  <p class="card-text">
-                    "Enjoy a complimentary chocolate fudge with every pastry
-                    bundle purchase! A sweet, rich treat to complete your
-                    perfect snack."
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div
-              class="col-sm-6 col-lg-3 mb-3"
-              data-aos="fade-up"
-              data-aos-duration="750"
-            >
-              <div class="card under-shadow3">
-                <a
-                  href="image/product/thumb/chocolate-muffin.jpg"
-                  data-lightbox="chocolate-muffin-product"
-                  data-title="Chocolate Muffin"
-                >
-                  <img
-                    src="image/product/thumb/chocolate-muffin.jpg"
-                    class="card-img-top"
-                    alt="..."
-                  />
-                </a>
-                <div class="card-body">
-                  <h5 class="card-title">Free Choco Muffin</h5>
-                  <p class="card-text">
-                    "Get a free chocolate muffin with every purchase of two
-                    specialty drinks! A delightful bonus for all chocolate
-                    lovers."
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+        <!-- Display all promos from API -->
+        <div class="row justify-content-center" id="promos-container">
+          <!-- Promos will be dynamically inserted here -->
         </div>
-        <div id="diskonPromo">
-          <div class="row justify-content-center">
-            <div class="col-sm-6 col-lg-3 mb-3">
-              <div class="card under-shadow3">
-                <a
-                  href="image/product/blueberry-muffin.jpg"
-                  data-lightbox="bluebrery-muffin-product"
-                  data-title="Blueberry Muffin"
-                >
-                  <img
-                    src="image/product/thumb/blueberry-muffin.jpg"
-                    class="card-img-top"
-                    alt="blueberry-muffin"
-                  />
-                </a>
-                <div class="card-body">
-                  <h5 class="card-title">Blueberry Muffin Disc 10%</h5>
-                  <p class="card-text">
-                    "Enjoy the perfect balance of fluffy texture and real
-                    blueberry goodness with a special 10% discount! Limited-time
-                    offer—grab yours today!
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-3 mb-3">
-              <div class="card under-shadow3">
-                <a
-                  href="image/product/cheese-chiffon.jpg"
-                  data-lightbox="cheese-chiffon-product"
-                  data-title="Cheese Chiffon"
-                >
-                  <img
-                    src="image/product/thumb/cheese-chiffon.jpg"
-                    class="card-img-top"
-                    alt="Cheese Chiffon"
-                  />
-                </a>
-                <div class="card-body">
-                  <h5 class="card-title">Cheese Chiffon Disc 15%</h5>
-                  <p class="card-text">
-                    "Indulge in the rich, soft, and cheesy delight of our Cheese
-                    Chiffon Cake. Get 15% off and savor every bite!"
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-3 mb-3">
-              <div class="card under-shadow3">
-                <a
-                  href="image/product/donut.jpg"
-                  data-lightbox="donut-product"
-                  data-title="Donut"
-                >
-                  <img
-                    src="image/product/thumb/donut.jpg"
-                    class="card-img-top"
-                    alt="donut"
-                  />
-                </a>
-                <div class="card-body">
-                  <h5 class="card-title">Donut Disc 20%</h5>
-                  <p class="card-text">
-                    "Crispy on the outside, soft on the inside—our donuts are a
-                    must-try! Enjoy a 20% discount and treat yourself to a sweet
-                    delight."
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="bonusPromo">
-          <div class="row justify-content-center">
-            <div class="col-sm-6 col-lg-3 mb-3">
-              <div class="card under-shadow3">
-                <a
-                  href="image/product/thumb/chocolate-mousse.jpg"
-                  data-lightbox="chocolate-mousse-product"
-                  data-title="Chocolate Mousse"
-                >
-                  <img
-                    src="image/product/thumb/chocolate-mousse.jpg"
-                    class="card-img-top"
-                    alt="..."
-                  />
-                </a>
-                <div class="card-body">
-                  <h5 class="card-title">Buy One, Get One</h5>
-                  <p class="card-text">
-                    "Double the joy with our Buy One, Get One Free offer!
-                    Available every Sunday—don’t miss out on this sweet deal."
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-3 mb-3">
-              <div class="card under-shadow3">
-                <a
-                  href="image/product/thumb/fudge.jpg"
-                  data-lightbox="fudges-product"
-                  data-title="Fudges"
-                >
-                  <img
-                    src="image/product/thumb/fudge.jpg"
-                    class="card-img-top"
-                    alt="..."
-                  />
-                </a>
-                <div class="card-body">
-                  <h5 class="card-title">Free Fudges</h5>
-                  <p class="card-text">
-                    "Enjoy a complimentary chocolate fudge with every pastry
-                    bundle purchase! A sweet, rich treat to complete your
-                    perfect snack."
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-3 mb-3">
-              <div class="card under-shadow3">
-                <a
-                  href="image/product/thumb/chocolate-muffin.jpg"
-                  data-lightbox="chocolate-muffin-product"
-                  data-title="Chocolate Muffin"
-                >
-                  <img
-                    src="image/product/thumb/chocolate-muffin.jpg"
-                    class="card-img-top"
-                    alt="..."
-                  />
-                </a>
-                <div class="card-body">
-                  <h5 class="card-title">Free Choco Muffin</h5>
-                  <p class="card-text">
-                    "Get a free chocolate muffin with every purchase of two
-                    specialty drinks! A delightful bonus for all chocolate
-                    lovers."
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Promo End -->
       </div>
     </div>
     <!-- Main End -->
@@ -466,58 +129,126 @@
     <!-- Footer Start -->
     <div class="container-fluid py-3 text-light footer-color">
       <div class="container d-flex justify-content-center">
-        <a class="text-light" href="./admin.html">&copy; 2025 Kelompok 2</a>
+        <a class="text-light">&copy; 2025 Kelompok 2</a>
       </div>
     </div>
     <!-- Footer End -->
     <script src="bootstrap-5.0.0-dist/js/bootstrap.bundle.min.js"></script>
     <script src="dist/js/lightbox-plus-jquery.min.js"></script>
     <script>
-      $(document).ready(function () {
-        var btnSemuaPromo = $("#semuaPromoBtn");
-        var btnDiskonPromo = $("#diskonPromoBtn");
-        var btnBonusPromo = $("#bonusPromoBtn");
+      document.addEventListener("DOMContentLoaded", function () {
+        const promosContainer = document.getElementById("promos-container");
 
-        var semuaPromoView = $("#semuaPromo");
-        var diskonPromoView = $("#diskonPromo");
-        var bonusPromoView = $("#bonusPromo");
-
-        diskonPromoView.hide();
-        bonusPromoView.hide();
-
-        function showAll() {
-          btnDiskonPromo.removeClass("active");
-          btnBonusPromo.removeClass("active");
-          btnSemuaPromo.addClass("active");
-
-          diskonPromoView.hide(1000);
-          bonusPromoView.hide(1000);
-          semuaPromoView.show(1000);
+        // Helper function to add ngrok-skip-browser-warning header to all requests
+        async function fetchWithHeaders(url, options = {}) {
+          if (!options.headers) {
+            options.headers = {};
+          }
+          options.headers["ngrok-skip-browser-warning"] = "1";
+          options.headers["Content-Type"] =
+            options.headers["Content-Type"] || "application/json";
+          options.mode = "cors";
+          return fetch(url, options);
         }
 
-        function showDiskon() {
-          btnSemuaPromo.removeClass("active");
-          btnBonusPromo.removeClass("active");
-          btnDiskonPromo.addClass("active");
+        // Function to fetch promos from API
+        async function fetchPromos() {
+          try {
+            const response = await fetchWithHeaders(
+              "https://puma-bold-grubworm.ngrok-free.app/promo"
+            );
 
-          semuaPromoView.hide(1000);
-          bonusPromoView.hide(1000);
-          diskonPromoView.show(1000);
+            if (!response.ok) {
+              throw new Error(`API responded with status: ${response.status}`);
+            }
+
+            const responseText = await response.text();
+            const data = JSON.parse(responseText);
+
+            if (data.status === 200 && Array.isArray(data.values)) {
+              return data.values;
+            } else {
+              console.error("Invalid API response format:", data);
+              return [];
+            }
+          } catch (error) {
+            console.error("Error fetching promos:", error);
+            return [];
+          }
         }
 
-        function showBonus() {
-          btnSemuaPromo.removeClass("active");
-          btnDiskonPromo.removeClass("active");
-          btnBonusPromo.addClass("active");
+        // Function to render all promos
+        async function renderPromos() {
+          // Get all promos from API
+          const allPromos = await fetchPromos();
 
-          semuaPromoView.hide(1000);
-          diskonPromoView.hide(1000);
-          bonusPromoView.show(1000);
+          console.log("All promos from API:", allPromos);
+
+          // Clear existing content
+          promosContainer.innerHTML = "";
+
+          // Add the promos to the container
+          allPromos.forEach((promo, index) => {
+            const promoElement = document.createElement("div");
+            promoElement.className = "col-sm-6 col-lg-3 mb-3";
+            promoElement.setAttribute("data-aos", "fade-up");
+
+            if (index > 0) {
+              promoElement.setAttribute(
+                "data-aos-duration",
+                (600 + index * 50).toString()
+              );
+            }
+
+            // Create slug from title
+            const slug = promo.title.toLowerCase().replace(/\s+/g, "-");
+
+            // Format dates for display
+            const formatDate = (dateString) => {
+              const date = new Date(dateString);
+              return date.toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "short",
+                day: "numeric",
+              });
+            };
+
+            const startDate = formatDate(promo.time_start);
+            const endDate = formatDate(promo.time_end);
+
+            promoElement.innerHTML = `
+              <div class="card under-shadow2 h-100">
+                <a
+                  href="${promo.image}"
+                  data-lightbox="${slug}"
+                  data-title="${promo.title}"
+                >
+                  <img
+                    src="${promo.image}"
+                    class="card-img-top"
+                    alt="${promo.title}"
+                  />
+                </a>
+                <div class="card-body text-center d-flex flex-column">
+                  <h5 class="card-title text-warning">${promo.title
+                    .split("–")[0]
+                    .trim()}</h5>
+                  <p class="card-text flex-grow-1">
+                    ${promo.description}
+                  </p>
+                  <p class="text-warning mt-auto">
+                    <small>Valid: ${startDate} - ${endDate}</small>
+                  </p>
+                </div>
+              </div>
+            `;
+
+            promosContainer.appendChild(promoElement);
+          });
         }
 
-        btnSemuaPromo.click(showAll);
-        btnDiskonPromo.click(showDiskon);
-        btnBonusPromo.click(showBonus);
+        // Call the function to render content
+        renderPromos();
       });
     </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
