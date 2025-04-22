@@ -633,19 +633,23 @@
               );
             }
 
+            // Use product.title instead of product.name
+            // Use product.description1 instead of product.description
             productElement.innerHTML = `
-        <div class="card under-shadow2">
+        <div class="card under-shadow2 h-100">
           <a href="${product.image}" data-lightbox="product-${
               product.id
-            }" data-title="${product.name}">
+            }" data-title="${product.title}">
             <img src="${product.image}" class="card-img-top" alt="${
-              product.name
+              product.title
             }" />
           </a>
-          <div class="card-body text-center">
-            <h5 class="card-title">${product.name}</h5>
-            <p class="card-text">${product.description}</p>
-            <p class="text-warning">Rp ${parseInt(product.price).toLocaleString(
+          <div class="card-body text-center d-flex flex-column">
+            <h5 class="card-title">${product.title}</h5>
+            <p class="card-text flex-grow-1">${
+              product.description1 || "No description available"
+            }</p>
+            <p class="text-warning mt-auto">Rp ${parseInt(product.price).toLocaleString(
               "id-ID"
             )}</p>
           </div>
